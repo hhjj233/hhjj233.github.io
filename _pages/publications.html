@@ -1,36 +1,28 @@
 ---
-layout: archive
+layout: academic
 title: "Publications"
 permalink: /publications/
 author_profile: true
+excerpt: "Publications and preprints by Jiaxi (Jay) Liu on cooperative perception, vehicle-road-cloud systems, and autonomous driving."
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<p class="page-intro">Journal articles, conference papers, and preprints. For citation information, visit my <a href="{{ site.author.googlescholar | escape }}">Google Scholar profile</a>.</p>
+<nav class="publication-jump-links" aria-label="Publication categories">
+  <a href="#journal-articles">Journal articles</a>
+  <a href="#conference-papers">Conference papers</a>
+  <a href="#preprints">Preprints</a>
+</nav>
+{% assign sorted_publications = site.data.cv.publications | sort: 'releaseDate' | reverse %}
+{% assign categories = 'Journal article|Conference paper|Preprint' | split: '|' %}
+{% assign headings = 'Journal articles|Conference papers|Preprints' | split: '|' %}
+{% assign anchors = 'journal-articles|conference-papers|preprints' | split: '|' %}
+{% for category in categories %}
+  {% assign publications = sorted_publications | where: 'status', category %}
+  {% if publications.size > 0 %}
+  <section aria-labelledby="{{ anchors[forloop.index0] }}">
+    <h2 id="{{ anchors[forloop.index0] }}">{{ headings[forloop.index0] }} <span class="section-count">{{ publications.size }}</span></h2>
+    {% for publication in publications %}
+      {% include publication-card.html publication=publication %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+  </section>
+  {% endif %}
+{% endfor %}

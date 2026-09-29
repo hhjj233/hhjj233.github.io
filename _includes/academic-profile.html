@@ -1,0 +1,18 @@
+{% assign profile = site.data.cv.basics %}
+<aside class="academic-profile" aria-label="About {{ profile.name | escape }}">
+  <img class="profile-portrait" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ profile.name | escape }}" width="213" height="300" fetchpriority="high">
+  <div class="profile-identity">
+    <h2>{{ profile.name }}</h2>
+    <p class="profile-chinese-name" lang="zh">{{ profile.chineseName }}</p>
+    <p class="profile-position">{{ site.author.bio | escape | replace: ' · ', '<br>' }}</p>
+    <p class="profile-affiliation">{{ profile.institution }}</p>
+    <a class="profile-email" href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+  </div>
+  <nav class="profile-resources" aria-label="Academic profiles and contact">
+    <a href="{{ site.author.googlescholar | escape }}"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
+    <a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+    <a href="{{ site.author.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a>
+    <a href="{{ '/cv/' | relative_url }}"><i class="far fa-file-lines" aria-hidden="true"></i>Curriculum vitae</a>
+  </nav>
+  <p class="profile-location">{{ profile.location.city }}, {{ profile.location.region }}</p>
+</aside>

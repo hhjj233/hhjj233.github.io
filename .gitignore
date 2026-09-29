@@ -5,6 +5,9 @@ _site/
 # Ignore the directory for local files during development
 local/
 
+# Historical CV supplied as local reference material, not a website asset
+/CV_henry_liu_learning.pdf
+
 # Ignore the Gemfile that is generated
 Gemfile.lock
 

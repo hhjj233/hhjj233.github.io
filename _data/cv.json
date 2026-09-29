@@ -1,152 +1,402 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Jiaxi (Jay) Liu",
+    "email": "jliu2487@wisc.edu",
+    "phone": null,
+    "website": "https://hhjj233.github.io",
+    "summary": "My research focuses on cooperative perception, vehicle-road-cloud integration, and language-model-assisted autonomous driving.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Madison",
+      "region": "Wisconsin",
+      "countryCode": "USA"
     },
     "profiles": [
       {
         "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "url": "https://scholar.google.com/citations?user=Uvv2kKUAAAAJ&hl=en"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "hhjj233",
+        "url": "https://github.com/hhjj233"
+      },
+      {
+        "network": "ORCID",
+        "url": "https://orcid.org/0009-0001-2749-6435"
       }
-    ]
+    ],
+    "label": "Ph.D. Candidate in Civil & Environmental Engineering",
+    "institution": "University of Wisconsin–Madison",
+    "lab": "Connected & Autonomous Transportation Systems Laboratory (CATS Lab)",
+    "labUrl": "https://catslab.engr.wisc.edu/",
+    "profileUrl": "https://catslab.engr.wisc.edu/staff/liu-jiaxi/",
+    "chineseName": "刘家熙",
+    "publicationName": "Jiaxi Liu"
   },
-  "work": [],
+  "work": [
+    {
+      "company": "CATS Lab, University of Wisconsin–Madison",
+      "position": "Research Assistant",
+      "startDate": "Fall 2024",
+      "endDate": "Present",
+      "summary": "Research on cooperative perception, vehicle-road-cloud integration systems, and LLM-assisted autonomous driving."
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
+      "institution": "University of Wisconsin–Madison",
+      "area": "Civil and Environmental Engineering",
+      "studyType": "Ph.D.",
+      "status": "In progress",
       "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "endDate": ""
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "institution": "Tsinghua University",
+      "area": "Mechanical Engineering",
+      "studyType": "M.S.",
+      "startDate": "2022",
+      "endDate": ""
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "institution": "Tsinghua University",
+      "area": "Vehicle Engineering",
+      "studyType": "B.Eng.",
+      "startDate": "2017",
+      "endDate": "2022",
+      "detail": "Also earned a second bachelor’s degree in Economics."
     }
   ],
   "skills": [],
   "languages": [],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Cooperation under limited communication",
+      "description": "Identifying safety-relevant blind spots and deciding when, with whom, and what to share."
+    },
+    {
+      "name": "Sensing beyond the vehicle",
+      "description": "Using roadside infrastructure and UWB measurements to reconstruct work zones and support connected driving."
+    },
+    {
+      "name": "Language-guided driving",
+      "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control."
+    }
+  ],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "id": "sra-cp",
+      "featured": true,
+      "summary": "Risk-aware cooperation that selects perception partners and shares safety-relevant information under limited communication bandwidth.",
+      "name": "SRA-CP: Spontaneous Risk-Aware Selective Cooperative Perception",
+      "authors": [
+        "Jiaxi Liu",
+        "Chengyuan Ma",
+        "Hang Zhou",
+        "Weizhe Tang",
+        "Shixiao Liang",
+        "Haoyang Ding",
+        "Xiaopeng Li",
+        "Bin Ran"
+      ],
+      "releaseDate": "2025-11-21",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2511.17461",
+      "arxiv": "2511.17461",
+      "news": false,
+      "image": "/images/publications/sra-cp.webp",
+      "imageAlt": "SRA-CP comparison of generic and risk-aware selective cooperative perception, from Figure 1 of the paper."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "id": "v2i-workzone",
+      "featured": true,
+      "summary": "Pose-conditioned UWB range denoising for reconstructing work-zone geometry from vehicle-to-infrastructure measurements.",
+      "name": "V2I Work Zone Geometry Reconstruction with Pose-Conditioned UWB Range Denoising",
+      "authors": [
+        "Jiaxi Liu",
+        "Hangyu Li",
+        "Yang Cheng",
+        "Rui Gan",
+        "Junwei You",
+        "Weizhe Tang",
+        "Peng Zhang",
+        "Steven T. Parker",
+        "Xiaopeng Li",
+        "Bin Ran"
+      ],
+      "releaseDate": "2026-05-28",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2606.00119",
+      "arxiv": "2606.00119",
+      "news": true,
+      "image": "/images/publications/v2i-workzone.webp",
+      "imageAlt": "UWB roadside units, vehicle-mounted sensors, and the real-world work-zone experiment layout, from Figure 3 of the paper."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "id": "cats-v2v",
+      "featured": true,
+      "summary": "A real-world cooperative perception dataset covering adverse weather, varied lighting, and complex traffic environments.",
+      "name": "CATS-V2V: A Real-World Vehicle-to-Vehicle Cooperative Perception Dataset with Complex Adverse Traffic Scenarios",
+      "authors": [
+        "Hangyu Li",
+        "Bofeng Cao",
+        "Zhaohui Liang",
+        "Wuzhen Li",
+        "Juyoung Oh",
+        "Yuxuan Chen",
+        "Shixiao Liang",
+        "Hang Zhou",
+        "Chengyuan Ma",
+        "Jiaxi Liu",
+        "Zheng Li",
+        "Peng Zhang",
+        "Keke Long",
+        "Maolin Liu",
+        "Jackson Jiang",
+        "Chunlei Yu",
+        "Shengxiang Liu",
+        "Hongkai Yu",
+        "Xiaopeng Li"
+      ],
+      "releaseDate": "2026",
+      "publisher": "CVPR Findings",
+      "status": "Conference paper",
+      "website": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Li_CATS-V2V_A_Real-World_Vehicle-to-Vehicle_Cooperative_Perception_Dataset_with_Complex_Adverse_CVPRF_2026_paper.pdf",
+      "arxiv": "2511.11168",
+      "project": "https://cats-v2v-dataset.github.io/",
+      "code": "https://github.com/CATS-V2V-Dataset/CATS-V2V",
+      "pdf": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Li_CATS-V2V_A_Real-World_Vehicle-to-Vehicle_Cooperative_Perception_Dataset_with_Complex_Adverse_CVPRF_2026_paper.pdf",
+      "news": false,
+      "image": "/images/publications/cats-v2v.webp",
+      "imageAlt": "CATS-V2V multi-view images, combined point cloud, and bird’s-eye-view annotations from the project website.",
+      "shortVenue": "CVPR Findings 2026"
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "id": "vlm-mpc",
+      "featured": true,
+      "summary": "A closed-loop driving controller combining vision-language reasoning with model predictive control.",
+      "name": "VLM-MPC: Model predictive controller augmented vision language model for autonomous driving",
+      "authors": [
+        "Keke Long",
+        "Haotian Shi",
+        "Jiaxi Liu",
+        "Chaowei Xiao",
+        "Xiaopeng Li"
+      ],
+      "releaseDate": "2026-02",
+      "publisher": "Transportation Research Part C: Emerging Technologies",
+      "status": "Journal article",
+      "website": "https://doi.org/10.1016/j.trc.2025.105487",
+      "arxiv": "2408.04821",
+      "doi": "10.1016/j.trc.2025.105487",
+      "volume": "183",
+      "pages": "105487",
+      "news": true,
+      "shortVenue": "TR-C 2026",
+      "image": "/images/publications/vlm-mpc.webp",
+      "imageAlt": "VLM-MPC architecture combining vision-language planning with model predictive control, extracted from Figure 1 of the preprint."
+    },
+    {
+      "id": "traffic-detection",
+      "featured": false,
+      "summary": "Lane-level detection of abnormal freeway traffic using sparse vehicle telematics.",
+      "name": "Real-time lane-level abnormal traffic detection on freeways using sparse telematics data",
+      "authors": [
+        "Shixiao Liang",
+        "Chengyuan Ma",
+        "Pei Li",
+        "Haotian Shi",
+        "Jiaxi Liu",
+        "Hang Zhou",
+        "Keke Long",
+        "Bofeng Cao",
+        "Todd Szymkowski",
+        "Xiaowei Shi",
+        "Xiaopeng Li"
+      ],
+      "releaseDate": "2026-09",
+      "publisher": "Accident Analysis & Prevention",
+      "status": "Journal article",
+      "website": "https://doi.org/10.1016/j.aap.2026.108607",
+      "arxiv": "2511.18148",
+      "doi": "10.1016/j.aap.2026.108607",
+      "volume": "234",
+      "pages": "108607",
+      "news": true
+    },
+    {
+      "id": "risk-occupancy",
+      "featured": false,
+      "summary": "A compact representation of spatial and temporal driving risk for vehicle-road-cloud perception and planning.",
+      "name": "Risk Occupancy: A New and Efficient Paradigm Through Vehicle-Road-Cloud Collaboration",
+      "authors": [
+        "Jiaxing Chen",
+        "Wei Zhong",
+        "Bolin Gao",
+        "Yifei Liu",
+        "Hengduo Zou",
+        "Jiaxi Liu",
+        "Yanbo Lu",
+        "Jin Huang",
+        "Zhihua Zhong"
+      ],
+      "releaseDate": "2026-09",
+      "publisher": "IEEE Transactions on Intelligent Transportation Systems",
+      "status": "Journal article",
+      "website": "https://doi.org/10.1109/tits.2026.3707600",
+      "arxiv": "2408.07367",
+      "doi": "10.1109/tits.2026.3707600",
+      "volume": "27",
+      "pages": "10631-10641",
+      "news": false
+    },
+    {
+      "id": "gaia",
+      "featured": false,
+      "summary": "Geometry-aware UWB denoising that couples temporal range modeling with anchor-layout estimation for work-zone reconstruction.",
+      "name": "Geometry-Aware Infrastructure-Anchored Denoiser for UWB Sensing and Work-Zone Reconstruction",
+      "authors": [
+        "Weizhe Tang",
+        "Jiaxi Liu",
+        "Junwei You",
+        "Steven T. Parker",
+        "Pei Li",
+        "Sikai Chen",
+        "Meng Ran",
+        "Bin Ran"
+      ],
+      "releaseDate": "2026-07-05",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2607.05449",
+      "arxiv": "2607.05449",
+      "news": true
+    },
+    {
+      "id": "v2x-qa",
+      "featured": false,
+      "summary": "A dataset and benchmark for multimodal reasoning across vehicle, infrastructure, and cooperative viewpoints.",
+      "name": "V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views",
+      "authors": [
+        "Junwei You",
+        "Pei Li",
+        "Zhuoyu Jiang",
+        "Weizhe Tang",
+        "Zilin Huang",
+        "Rui Gan",
+        "Jiaxi Liu",
+        "Yan Zhao",
+        "Sikai Chen",
+        "Bin Ran"
+      ],
+      "releaseDate": "2026-04-03",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2604.02710",
+      "arxiv": "2604.02710",
+      "code": "https://github.com/junwei0001/V2X-QA",
+      "news": false
+    },
+    {
+      "id": "hermes",
+      "featured": false,
+      "summary": "Risk-aware multimodal trajectory planning that incorporates semantic guidance for long-tail driving scenarios.",
+      "name": "HERMES: A Holistic End-to-End Risk-Aware Multimodal Embodied System with Vision-Language Models for Long-Tail Autonomous Driving",
+      "authors": [
+        "Weizhe Tang",
+        "Junwei You",
+        "Jiaxi Liu",
+        "Zhaoyi Wang",
+        "Rui Gan",
+        "Zilin Huang",
+        "Pei Li",
+        "Sikai Chen",
+        "Feng Wei",
+        "Bin Ran"
+      ],
+      "releaseDate": "2026-02-01",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2602.00993",
+      "arxiv": "2602.00993",
+      "news": false
+    },
+    {
+      "id": "followgen",
+      "featured": false,
+      "summary": "Conditional diffusion for car-following trajectory prediction, incorporating vehicle dynamics and inter-vehicle interactions.",
+      "name": "FollowGen: A scaled noise conditional diffusion model for car-following trajectory prediction",
+      "authors": [
+        "Junwei You",
+        "Rui Gan",
+        "Weizhe Tang",
+        "Zilin Huang",
+        "Jiaxi Liu",
+        "Zhuoyu Jiang",
+        "Haotian Shi",
+        "Keshu Wu",
+        "Keke Long",
+        "Sicheng Fu",
+        "Sikai Chen",
+        "Bin Ran"
+      ],
+      "releaseDate": "2025-12",
+      "publisher": "Communications in Transportation Research",
+      "status": "Journal article",
+      "website": "https://doi.org/10.1016/j.commtr.2025.100215",
+      "arxiv": "2411.16747",
+      "doi": "10.1016/j.commtr.2025.100215",
+      "volume": "5",
+      "pages": "100215",
+      "news": false
+    },
+    {
+      "id": "collaborative-perception-review",
+      "featured": false,
+      "summary": "A review of vehicle-road-cloud collaborative perception architectures, fusion methods, and deployment challenges.",
+      "name": "Vehicle-Road-Cloud Collaborative Perception Framework and Key Technologies: A Review",
+      "authors": [
+        "Bolin Gao",
+        "Jiaxi Liu",
+        "Hengduo Zou",
+        "Jiaxing Chen",
+        "Lei He",
+        "Keqiang Li"
+      ],
+      "releaseDate": "2024-12",
+      "publisher": "IEEE Transactions on Intelligent Transportation Systems",
+      "status": "Journal article",
+      "website": "https://doi.org/10.1109/tits.2024.3459799",
+      "doi": "10.1109/tits.2024.3459799",
+      "volume": "25",
+      "pages": "19295-19318",
+      "news": false
+    },
+    {
+      "id": "sdmap-survey",
+      "featured": false,
+      "summary": "A survey of local map construction using standard-definition maps as priors for intelligent driving.",
+      "name": "Local Map Construction with SDMap: A Comprehensive Survey",
+      "authors": [
+        "Jiaqi Li",
+        "Pingfan Jia",
+        "Jiaxing Chen",
+        "Jiaxi Liu",
+        "Lei He",
+        "Keqiang Li"
+      ],
+      "releaseDate": "2024-09-04",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2409.02415",
+      "arxiv": "2409.02415",
+      "news": false
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
 }
