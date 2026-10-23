@@ -4,7 +4,7 @@
     "email": "jliu2487@wisc.edu",
     "phone": null,
     "website": "https://hhjj233.github.io",
-    "summary": "My research focuses on cooperative perception, vehicle-road-cloud integration, and language-model-assisted autonomous driving.",
+    "summary": "My research focuses on cooperative perception, vehicle-road-cloud integration, language-model-assisted autonomous driving, and safety-critical scenario generation.",
     "location": {
       "city": "Madison",
       "region": "Wisconsin",
@@ -81,10 +81,64 @@
     {
       "name": "Language-guided driving",
       "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control."
+    },
+    {
+      "name": "Calibrated safety testing",
+      "description": "Generating corner-case scenarios whose adversity is set as a percentile of the natural risk in the same traffic context."
     }
   ],
   "references": [],
   "publications": [
+    {
+      "id": "corner-percentile",
+      "featured": true,
+      "summary": "Percentile-controlled generation of highway corner cases, indexing each scenario's adversity by its risk percentile among the natural futures of the same traffic context.",
+      "name": "How corner is a corner case? Percentile control for highway scenario generation",
+      "authors": [
+        "Jiaxi Liu",
+        "Hang Zhou",
+        "Hangyu Li",
+        "Yifan Wang",
+        "Keke Long",
+        "Chengyuan Ma",
+        "Bin Ran",
+        "Xiaopeng Li"
+      ],
+      "releaseDate": "2026-10-04",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2610.05003",
+      "arxiv": "2610.05003",
+      "project": "https://hhjj233.github.io/CornerPercentile/",
+      "code": "https://github.com/hhjj233/P-control-SG",
+      "news": true,
+      "image": "/images/publications/corner-percentile.webp",
+      "imageAlt": "Planner-test renderings of one highway scene generated at requested risk percentiles p = 0.1, 0.5, and 0.9, from the project page."
+    },
+    {
+      "id": "sage",
+      "featured": true,
+      "summary": "Work-zone pathway prediction that re-ranks geometric candidate paths with a vision-language model's trajectory and checks the choice against MUTCD-derived rules.",
+      "name": "SAGE: A hybrid vision–language and geometry framework for work-zone pathway prediction under temporary traffic control",
+      "authors": [
+        "Jiaxi Liu",
+        "Keshu Wu",
+        "Weizhe Tang",
+        "Bofeng Cao",
+        "Sikai Chen",
+        "Xiaopeng Li",
+        "Steven T. Parker",
+        "Bin Ran"
+      ],
+      "releaseDate": "2026",
+      "publisher": "",
+      "status": "Manuscript",
+      "website": "https://hhjj233.github.io/SAGE-page/",
+      "project": "https://hhjj233.github.io/SAGE-page/",
+      "news": false,
+      "image": "/images/publications/sage.webp",
+      "imageAlt": "SAGE path predictions overlaid on nine ROADWork work-zone scenes from U.S. cities, from the project page."
+    },
     {
       "id": "sra-cp",
       "featured": true,
@@ -198,6 +252,31 @@
       "shortVenue": "TR-C 2026",
       "image": "/images/publications/vlm-mpc.webp",
       "imageAlt": "VLM-MPC architecture combining vision-language planning with model predictive control, extracted from Figure 1 of the preprint."
+    },
+    {
+      "id": "pi-koopman",
+      "featured": false,
+      "summary": "Physics-informed Koopman learning that corrects a calibrated car-following law to identify automated-vehicle dynamics from short, noisy trajectories, with the CATS-CF car-following dataset.",
+      "name": "Physics-Informed Koopman Learning for Data-Efficient System Identification of Automated Vehicle Dynamics",
+      "authors": [
+        "Hangyu Li",
+        "Yiming Meng",
+        "Zhaohui Liang",
+        "Yunqing Xiao",
+        "Yuxuan Chen",
+        "Bofeng Cao",
+        "Shixiao Liang",
+        "Jiaxi Liu",
+        "Haotian Shi",
+        "Xiaopeng Li"
+      ],
+      "releaseDate": "2026-10-17",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2610.24588",
+      "arxiv": "2610.24588",
+      "code": "https://github.com/CATS-Lab/PI-Koopman",
+      "news": false
     },
     {
       "id": "traffic-detection",
@@ -397,6 +476,15 @@
     }
   ],
   "presentations": [],
-  "teaching": [],
+  "teaching": [
+    {
+      "course": "CEE 571: Urban Transportation Planning",
+      "term": "Fall 2026",
+      "institution": "University of Wisconsin–Madison",
+      "name": "Transportation Planning Software",
+      "summary": "an interactive lecture companion with five browser demos set in one hypothetical city, covering the four-step travel demand model, walking access to transit, and zone size.",
+      "url": "https://hhjj233.github.io/cee571-planning-software/"
+    }
+  ],
   "portfolio": []
 }

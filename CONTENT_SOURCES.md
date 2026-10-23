@@ -18,10 +18,13 @@
 
 [关联资料页](https://www.alphaxiv.org/@jiaxi-liu-2) 同时链接相同的 Scholar ID 和上述 CATS Lab 个人页面，用作检索线索。论文的标题、作者顺序、年份、期刊等再向 arXiv、Crossref（出版商提交的元数据）和 CVF 正式论文核对。没有采用同名上海交通大学学生的资料。
 
-下列是当前已核对的 12 项记录，不宣称完整覆盖 Scholar。期刊版本与其预印本合并为一项，保留预印本链接。
+下列是当前已核对的 15 项记录（含 1 项尚无预印本的 Manuscript），不宣称完整覆盖 Scholar。期刊版本与其预印本合并为一项，保留预印本链接。
 
 | 记录 | 当前展示 | 核对来源 |
 | --- | --- | --- |
+| Corner Percentile（How corner is a corner case?） | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.05003)、[项目页](https://hhjj233.github.io/CornerPercentile/)、[代码](https://github.com/hhjj233/P-control-SG) |
+| PI-Koopman | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.24588)、[代码与 CATS-CF 数据](https://github.com/CATS-Lab/PI-Koopman) |
+| SAGE | Manuscript, 2026 | [项目页](https://hhjj233.github.io/SAGE-page/)（作者、标题取自页面 `citation_*` 元数据与 README） |
 | VLM-MPC | Transportation Research Part C, 2026 | [Crossref](https://api.crossref.org/works/10.1016/j.trc.2025.105487)、[arXiv](https://arxiv.org/abs/2408.04821) |
 | Real-time lane-level abnormal traffic detection | Accident Analysis & Prevention, 2026 | [Crossref](https://api.crossref.org/works/10.1016/j.aap.2026.108607)、[arXiv](https://arxiv.org/abs/2511.18148) |
 | Risk Occupancy | IEEE T-ITS, 2026 | [Crossref](https://api.crossref.org/works/10.1109/TITS.2026.3707600)、[arXiv](https://arxiv.org/abs/2408.07367) |
@@ -71,3 +74,24 @@
 | `images/publications/v2i-workzone.webp` | [V2I Figure 3：实测设备与实验场地](https://arxiv.org/html/2606.00119v1/figs/settings.png) |
 | `images/publications/cats-v2v.webp` | [CATS-V2V 项目多视角示例](https://cats-v2v-dataset.github.io/assets/dataset_multiview.png) |
 | `images/publications/vlm-mpc.webp` | [VLM-MPC 预印本](https://arxiv.org/pdf/2408.04821) 第 5 页 Figure 1，提取原始嵌入图像及其透明蒙版 |
+| `images/publications/corner-percentile.webp` | [Corner Percentile 项目页首屏视频封面](https://hhjj233.github.io/CornerPercentile/static/videos/hero_poster.jpg) |
+| `images/publications/sage.webp` | [SAGE 项目页 teaser](https://hhjj233.github.io/SAGE-page/static/images/teaser_grid.jpg) |
+
+## GitHub 内容整理（2026-10-23）
+
+逐一检查了 `hhjj233` 名下全部仓库（含私有）、CATS-Lab 组织仓库和协作仓库。组织与协作仓库按提交作者核对，只有 `CATS-Lab/MCity_Challenge` 和 `RemGao/fusion_perception_THICV` 含本人提交，二者均为私有，未写入页面。
+
+已加入网站：
+
+- **Corner Percentile**：本人公开仓库 `CornerPercentile`（项目页）与 `P-control-SG`（代码与预训练模型）。arXiv 元数据核对标题、作者顺序与首次提交日期 2026-10-04。代码 README 写明已投稿 TR-C；页面按其余预印本的处理方式只标 arXiv，不写审稿状态。
+- **SAGE**：本人公开仓库 `SAGE-page`（项目页）。论文与代码尚未公开（代码仓库 `SAGE` 为私有），因此标为 `Manuscript`，只链接项目页，不进入 Recent updates。arXiv 发布后改为 `Preprint` 并补链接。
+- **PI-Koopman**：arXiv 2610.24588（2026-10-17），本人为第 8 作者；代码与 CATS-CF 数据在公开的 `CATS-Lab/PI-Koopman`。不作首页精选，也不进入 Recent updates。
+- **教学**：本人公开仓库 `cee571-planning-software`，即 CEE 571（Fall 2026）讲座 *Transportation Planning Software* 的互动配套网页。课程名依据 [UW–Madison Guide](https://guide.wisc.edu/courses/civ_engr/) 的 CIV ENGR 571 — Urban Transportation Planning。本人在该课的角色（如助教）未确认，页面不写角色。
+- 新增研究方向 *Calibrated safety testing*，对应 Corner Percentile；CV 研究简介同步补上 scenario generation。
+
+未加入网站：
+
+- 私有仓库：`SAGE`、`bridge-v2i-uwb`、`JevCurric`、`GeoCRM`、`real-time-v2x`。
+- `CP`：2024 年的占位 README，链接和引用均为占位内容。
+- `cee571`：考试计时页，不属于学术主页内容。
+- CATS-Lab 中无本人提交的仓库。

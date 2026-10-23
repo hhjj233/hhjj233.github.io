@@ -29,6 +29,18 @@
   </div>
   {% endfor %}
 </section>
+{% if cv.teaching.size > 0 %}
+<section aria-labelledby="cv-teaching">
+  <h2 id="cv-teaching">Teaching</h2>
+  {% for item in cv.teaching %}
+  <div class="cv-entry">
+    <div class="cv-entry-heading"><h3>{{ item.course }}</h3><span>{{ item.term }}</span></div>
+    <p>{{ item.institution }}</p>
+    <p class="cv-detail"><a href="{{ item.url | escape }}">{{ item.name }}</a>: {{ item.summary }}</p>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
 <section aria-labelledby="cv-publications">
   <h2 id="cv-publications">Publications & preprints</h2>
   {% assign publications = cv.publications | sort: 'releaseDate' | reverse %}

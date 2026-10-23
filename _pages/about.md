@@ -18,7 +18,7 @@ redirect_from:
 
 <section class="research-section" id="research" aria-labelledby="research-title">
   <h2 id="research-title">Research</h2>
-  <p>I am interested in connecting perception with the decisions a vehicle needs to make. My recent work explores three complementary directions:</p>
+  <p>I am interested in connecting perception with the decisions a vehicle needs to make. My recent work explores four complementary directions:</p>
   <ul class="research-directions">
     {% for interest in cv.interests %}
     <li><strong>{{ interest.name }}.</strong> {{ interest.description }}</li>
@@ -44,9 +44,23 @@ redirect_from:
     <h2 id="selected-title">Selected publications</h2>
     <a href="{{ '/publications/' | relative_url }}">View all <span aria-hidden="true">→</span></a>
   </div>
-  <p class="section-note">Selected journal articles, conference papers, and preprints.</p>
+  <p class="section-note">Selected journal articles, conference papers, preprints, and manuscripts.</p>
   {% assign featured = cv.publications | where: 'featured', true %}
   {% for publication in featured %}
     {% include publication-card.html publication=publication %}
   {% endfor %}
 </section>
+
+{% if cv.teaching.size > 0 %}
+<section id="teaching" aria-labelledby="teaching-title">
+  <h2 id="teaching-title">Teaching</h2>
+  <ul class="news-list">
+    {% for item in cv.teaching %}
+    <li>
+      <span class="news-term">{{ item.term }}</span>
+      <div><strong>{{ item.course }}</strong>, {{ item.institution }}. <a href="{{ item.url | escape }}">{{ item.name }}</a>: {{ item.summary }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
