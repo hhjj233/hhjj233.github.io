@@ -596,5 +596,13 @@
       "role": "Teaching Assistant"
     }
   ],
+  "news": [
+    {
+      "date": "2026-10-23",
+      "text": "Five papers accepted for presentation at the 2027 TRB Annual Meeting (Washington, D.C., January 2027).",
+      "linkText": "2027 TRB Annual Meeting",
+      "url": "https://www.nationalacademies.org/events/887"
+    }
+  ],
   "portfolio": []
 }

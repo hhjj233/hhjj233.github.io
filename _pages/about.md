@@ -38,10 +38,20 @@ redirect_from:
 <section class="content-section" id="news" aria-labelledby="news-title">
   <h2 id="news-title">News &amp; updates</h2>
   <ul class="news-list">
-    {% assign news = cv.publications | where: 'news', true | sort: 'releaseDate' | reverse %}
-    {% for publication in news limit: 4 %}
-    <li><span class="news-date">[{{ publication.releaseDate | slice: 0, 7 | replace: '-', '.' }}]</span> {% if publication.status == 'Preprint' %}New preprint:{% else %}Published in <em>{{ publication.publisher }}</em>:{% endif %} <a href="{{ publication.website | escape }}">{{ publication.name }}</a>.</li>
+    {% comment %}Merge standalone news with paper news as "date§item" strings, then sort them by date.{% endcomment %}
+    {% assign news_items = '' | split: '' %}
+    {% for item in cv.news %}
+      {% capture link %}<a href="{{ item.url | escape }}">{{ item.linkText }}</a>{% endcapture %}
+      {% capture entry %}{{ item.date }}§<li><span class="news-date">[{{ item.date | slice: 0, 7 | replace: '-', '.' }}]</span> {% if item.url %}{{ item.text | replace: item.linkText, link }}{% else %}{{ item.text }}{% endif %}</li>{% endcapture %}
+      {% assign news_items = news_items | push: entry %}
     {% endfor %}
+    {% assign paper_news = cv.publications | where: 'news', true %}
+    {% for publication in paper_news %}
+      {% capture entry %}{{ publication.releaseDate }}§<li><span class="news-date">[{{ publication.releaseDate | slice: 0, 7 | replace: '-', '.' }}]</span> {% if publication.status == 'Preprint' %}New preprint:{% else %}Published in <em>{{ publication.publisher }}</em>:{% endif %} <a href="{{ publication.website | escape }}">{{ publication.name }}</a>.</li>{% endcapture %}
+      {% assign news_items = news_items | push: entry %}
+    {% endfor %}
+    {% assign news_items = news_items | sort | reverse %}
+    {% for entry in news_items limit: 5 %}{{ entry | split: '§' | last }}{% endfor %}
   </ul>
 </section>
 

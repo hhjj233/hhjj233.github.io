@@ -134,7 +134,7 @@ CV 页面支持 Print / Save as PDF。用户提供的旧 CV 仅用作教育信�
   - 粗体出处：优先使用 `shortVenue`（例如 `TR-C 2026`）；否则预印本和 Manuscript 显示为“状态 + 年份”，期刊和会议显示为“`publisher` + 年份”。
   - `underReview`：在主题行显示为“Under review at …”（冒号后的副标题省略），CV 中显示全名。
   - 没有 `image` 的论文显示一个写着出处的占位框。
-- **News & updates**：仍由论文的 `news: true` 生成，取最近四条。讲座、获奖、入职等不属于论文的动态不能写进 `publications`，需要改 `_pages/about.md` 的列表，或另建新闻数据文件。Teaching 读取 `teaching` 数组，格式与 News 一致。
+- **News & updates**：合并两类来源，按日期倒序取最近五条：一是论文中 `news: true` 的条目，二是 `news` 数组中的独立动态（如会议录用、获奖、讲座）。独立动态的字段为 `date`、`text`，以及可选的 `url` 和 `linkText`；`text` 中与 `linkText` 相同的文字会渲染成链接。`date` 用于排序，页面只显示到月份。Teaching 读取 `teaching` 数组，格式与 News 一致。
 - 改版截图：`local/redesign-home-desktop.png`、`local/redesign-home-mobile.png`、`local/redesign-home-dark.png`、`local/redesign-publications-all.png`。
 - **无 JavaScript 时**：只显示 Selected 论文并隐藏切换和筛选控件，页面会提示完整列表在 `/publications/`。论文页按类型分组，始终显示全部论文。
 - **CV**：屏幕上不重复显示姓名块，因为顶部信息栏已经有；打印时隐藏顶部信息栏、导航和配图，改为显示姓名、联系方式和紧凑的论文列表。

@@ -121,3 +121,8 @@
   - 未归类：PI-Koopman、lane-level crash detection、FollowGen、SDMap survey。
 - 为了让 All 视图中的每篇论文都有配图，从 arXiv HTML 版取了 8 张图（见上表），按原像素尺寸编码为 WebP，透明背景铺白。协同感知综述没有开放获取的图，显示出处占位框。
 - 两篇 T-ITS 论文新增 `shortVenue`（IEEE T-ITS 2026 / 2024），用于粗体出处。
+
+## TRB 2027（2026-10-23）
+
+- 用户告知有 5 篇论文被 TRB 年会接受。会议名称、日期和地点依据 [National Academies 活动页](https://www.nationalacademies.org/events/887)：2027 TRB Annual Meeting，2027 年 1 月 10–14 日，华盛顿特区。
+- News 中只写“Five papers accepted for presentation”。具体论文和展示形式（讲台或海报）用户尚未提供，因此没有逐篇列出。动态日期取用户告知当天，录用通知的确切日期未知。
