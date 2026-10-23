@@ -1,11 +1,20 @@
-<div class="masthead">
-  <div class="masthead__inner-wrap academic-masthead">
-    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="academic-nav" aria-label="Main navigation">
-      {% for link in site.data.navigation.main %}
-      <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
-      <button type="button" class="theme-button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+{% assign profile = site.data.cv.basics %}
+{% capture profile_name %}{{ profile.name }} <span class="profile-chinese-name" lang="zh">{{ profile.chineseName }}</span>{% endcapture %}
+<header class="profile-header">
+  <img class="avatar" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ profile.name | escape }}" width="136" height="136" fetchpriority="high">
+  <div class="profile-details">
+    {% if page.home %}<h1 class="profile-name">{{ profile_name }}</h1>{% else %}<p class="profile-name"><a href="{{ '/' | relative_url }}">{{ profile_name }}</a></p>{% endif %}
+    <p class="role-line">{{ profile.label }}<span class="institution">{{ profile.institution }} · <a href="{{ profile.labUrl }}">CATS Lab</a></span></p>
+    <nav class="profile-links" aria-label="Contact and academic profiles">
+      <a href="mailto:{{ profile.email }}">Email</a>
+      <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      <a href="{{ site.author.orcid }}">ORCID</a>
+      <a href="{{ '/cv/' | relative_url }}">CV</a>
     </nav>
   </div>
-</div>
+</header>
+<nav class="simple-nav" aria-label="Main navigation">
+  <div class="simple-nav-links">{% for link in site.data.navigation.main %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}</div>
+  <button type="button" class="theme-button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+</nav>

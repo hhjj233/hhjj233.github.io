@@ -1,15 +1,15 @@
 {% assign cv = site.data.cv %}
-<div class="cv-actions"><button type="button" class="profile-link-primary" data-print-cv>Print / Save as PDF</button></div>
+<div class="cv-actions"><button type="button" class="print-button" data-print-cv>Print / Save as PDF</button></div>
 <div class="cv-profile">
   <h2>{{ cv.basics.name }} <span lang="zh">{{ cv.basics.chineseName }}</span></h2>
   <p>{{ cv.basics.label }}<br>{{ cv.basics.institution }}<br><a href="mailto:{{ cv.basics.email }}">{{ cv.basics.email }}</a></p>
   <div class="profile-links">{% for profile in cv.basics.profiles %}<a href="{{ profile.url | escape }}">{{ profile.network }}</a>{% endfor %}</div>
 </div>
-<section aria-labelledby="cv-research">
+<section class="content-section" aria-labelledby="cv-research">
   <h2 id="cv-research">Research interests</h2>
   <p>{{ cv.basics.summary }}</p>
 </section>
-<section aria-labelledby="cv-experience">
+<section class="content-section" aria-labelledby="cv-experience">
   <h2 id="cv-experience">Research experience</h2>
   {% for work in cv.work %}
   <div class="cv-entry">
@@ -19,7 +19,7 @@
   </div>
   {% endfor %}
 </section>
-<section aria-labelledby="cv-education">
+<section class="content-section" aria-labelledby="cv-education">
   <h2 id="cv-education">Education</h2>
   {% for education in cv.education %}
   <div class="cv-entry">
@@ -30,7 +30,7 @@
   {% endfor %}
 </section>
 {% if cv.teaching.size > 0 %}
-<section aria-labelledby="cv-teaching">
+<section class="content-section" aria-labelledby="cv-teaching">
   <h2 id="cv-teaching">Teaching</h2>
   {% for item in cv.teaching %}
   <div class="cv-entry">
@@ -41,8 +41,8 @@
   {% endfor %}
 </section>
 {% endif %}
-<section aria-labelledby="cv-publications">
-  <h2 id="cv-publications">Publications & preprints</h2>
+<section class="content-section" aria-labelledby="cv-publications">
+  <h2 id="cv-publications">Publications &amp; preprints</h2>
   {% assign publications = cv.publications | sort: 'releaseDate' | reverse %}
   {% for publication in publications %}
     {% include publication-card.html publication=publication compact=true %}

@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-<main id="main" class="academic-layout">
-  {% include academic-profile.html %}
-  <article class="academic-content{% if page.cv %} academic-cv{% endif %}">
-    <h1 class="page__title{% if page.home %} research-headline{% endif %}">{{ page.title }}</h1>
-    {{ content }}
-  </article>
+<main id="main-content" class="main-content{% if page.cv %} cv-page{% endif %}">
+  {% unless page.home %}<h1 class="page-title">{{ page.title }}</h1>{% endunless %}
+  {{ content }}
 </main>

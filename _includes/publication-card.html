@@ -1,28 +1,23 @@
 {% assign publication = include.publication %}
 {% assign publication_author = site.data.cv.basics.publicationName | default: site.data.cv.basics.name %}
-<article class="publication{% if publication.image and include.compact != true %} publication-with-image{% endif %}" id="{{ publication.id | escape }}">
-  {% if publication.image and include.compact != true %}
-  <div class="publication-visual">
-    <img src="{{ publication.image | relative_url }}" alt="{{ publication.imageAlt | escape }}" loading="lazy" decoding="async" width="220" height="150">
-    {% if publication.shortVenue %}<span class="publication-visual-label">{{ publication.shortVenue }}</span>{% endif %}
+{% assign year = publication.releaseDate | slice: 0, 4 %}
+{% if publication.shortVenue %}{% assign venue_label = publication.shortVenue %}{% elsif publication.status == 'Preprint' or publication.status == 'Manuscript' %}{% assign venue_label = publication.status | append: ' ' | append: year %}{% else %}{% assign venue_label = publication.publisher | append: ' ' | append: year %}{% endif %}
+<article class="publication-card{% if include.compact %} publication-card--compact{% endif %}" id="pub-{{ publication.id | escape }}" data-topics="{{ publication.topics | join: ' ' }}" data-featured="{{ publication.featured }}" data-featured-rank="{{ include.featured_rank }}" data-date-rank="{{ include.date_rank }}"{% if include.hidden %} hidden{% endif %}>
+  {% unless include.compact %}
+  <div class="publication-media">
+    {% if publication.image %}<a class="publication-media-link" href="{{ publication.website | escape }}" tabindex="-1" aria-hidden="true"><img src="{{ publication.image | relative_url }}" alt="{{ publication.imageAlt | escape }}" loading="lazy" decoding="async" width="210" height="128"></a>{% else %}<span class="publication-media-fallback" aria-hidden="true">{{ venue_label }}</span>{% endif %}
   </div>
-  {% endif %}
-  <div class="publication-body">
-  <div class="publication-meta">
-    <span class="publication-kind">{{ publication.status | escape }}</span>
-    <span>{{ publication.releaseDate | slice: 0, 4 }}</span>
-  </div>
-  <h3><a href="{{ publication.website | escape }}">{{ publication.name | escape }}</a></h3>
-  <p class="publication-authors">{% for author in publication.authors %}{% if author == publication_author %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
-  {% if publication.publisher and publication.publisher != '' %}{% assign has_publisher = true %}{% else %}{% assign has_publisher = false %}{% endif %}
-  {% if has_publisher or publication.underReview %}<p class="publication-venue">{% if has_publisher %}<em>{{ publication.publisher | escape }}</em>{% if publication.volume and publication.volume != '' %}, {{ publication.volume }}{% endif %}{% if publication.pages and publication.pages != '' %}, {{ publication.pages }}{% endif %}{% endif %}{% if publication.underReview %}{% if has_publisher %} · {% endif %}Under review at <em>{{ publication.underReview | escape }}</em>{% endif %}</p>{% endif %}
-  {% unless include.compact %}<p class="publication-summary">{{ publication.summary | escape }}</p>{% endunless %}
-  <div class="publication-links">
-    {% if publication.doi %}<a href="{{ publication.website | escape }}">DOI</a>{% endif %}
-    {% if publication.arxiv %}<a href="https://arxiv.org/abs/{{ publication.arxiv }}">arXiv</a>{% endif %}
-    {% if publication.pdf %}<a href="{{ publication.pdf | escape }}">PDF</a>{% elsif publication.arxiv %}<a href="https://arxiv.org/pdf/{{ publication.arxiv }}">PDF <span class="sr-only">(preprint)</span></a>{% endif %}
-    {% if publication.project %}<a href="{{ publication.project | escape }}">Project</a>{% endif %}
-    {% if publication.code %}<a href="{{ publication.code | escape }}">Code</a>{% endif %}
-  </div>
+  {% endunless %}
+  <div class="publication-card-body">
+    {% if include.compact %}<p class="publication-meta"><span>{{ publication.status | escape }}</span><span>{{ year }}</span></p>{% endif %}
+    <h3><a href="{{ publication.website | escape }}">{{ publication.name | escape }}</a></h3>
+    <p class="authors">{% for author in publication.authors %}{% if author == publication_author %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    {% if include.compact %}
+    {% if publication.publisher and publication.publisher != '' %}{% assign has_publisher = true %}{% else %}{% assign has_publisher = false %}{% endif %}
+    {% if has_publisher or publication.underReview %}<p class="publication-venue">{% if has_publisher %}<em>{{ publication.publisher | escape }}</em>{% if publication.volume and publication.volume != '' %}, {{ publication.volume }}{% endif %}{% if publication.pages and publication.pages != '' %}, {{ publication.pages }}{% endif %}{% endif %}{% if publication.underReview %}{% if has_publisher %} · {% endif %}Under review at <em>{{ publication.underReview | escape }}</em>{% endif %}</p>{% endif %}
+    {% else %}
+    <p class="publication-meta"><span>{{ year }}</span>{% for topic_id in publication.topics %}{% assign topic = site.data.cv.interests | where: 'id', topic_id | first %}<span>{{ topic.label }}</span>{% endfor %}{% if publication.underReview %}<span class="publication-distinction">Under review at {{ publication.underReview | split: ':' | first | escape }}</span>{% endif %}</p>
+    {% endif %}
+    <p class="publication-links">{% unless include.compact %}<strong class="publication-venue-label">{{ venue_label }}</strong>{% endunless %}{% if publication.doi %}<a href="{{ publication.website | escape }}">DOI</a>{% endif %}{% if publication.arxiv %}<a href="https://arxiv.org/abs/{{ publication.arxiv }}">arXiv</a>{% endif %}{% if publication.pdf %}<a href="{{ publication.pdf | escape }}">PDF</a>{% elsif publication.arxiv %}<a href="https://arxiv.org/pdf/{{ publication.arxiv }}">PDF <span class="sr-only">(preprint)</span></a>{% endif %}{% if publication.project %}<a href="{{ publication.project | escape }}">Project</a>{% endif %}{% if publication.code %}<a href="{{ publication.code | escape }}">Code</a>{% endif %}</p>
   </div>
 </article>

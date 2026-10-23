@@ -6,11 +6,14 @@
 
 | 要修改的内容 | 文件 |
 | --- | --- |
-| 网站标题、页脚姓名、侧栏身份、头像文件名、侧栏学术链接、SEO | `_config.yml` |
-| 侧栏与 CV 的姓名、中文名、邮箱、单位、城市 | `_data/cv.json` 的 `basics` |
+| 网站标题、页脚姓名、头像文件名、顶部学术链接、SEO | `_config.yml` |
+| 顶部信息栏与 CV 的姓名、中文名、身份、单位、邮箱 | `_data/cv.json` 的 `basics` |
 | 教育、研究经历、研究兴趣、论文数据 | `_data/cv.json` |
 | 教学（首页 Teaching 与 CV） | `_data/cv.json` 的 `teaching` |
-| 首页介绍与精选研究布局 | `_pages/about.md` |
+| 首页介绍与各区块布局 | `_pages/about.md` |
+| 顶部信息栏与导航条 | `_includes/masthead.html` |
+| 论文卡片 | `_includes/publication-card.html` |
+| 论文列表切换与主题筛选 | `assets/js/academic.js` |
 | 论文分类页面 | `_pages/publications.html` |
 | CV 页面与渲染模板 | `_pages/cv.md`、`_includes/cv-template.html` |
 | 导航 | `_data/navigation.yml` |
@@ -18,17 +21,17 @@
 | 照片 | `images/jiaxi-liu.png` |
 | 已核实资料和仍待补充的信息 | `CONTENT_SOURCES.md` |
 
-首页精选、论文页和 CV 共用 `_data/cv.json` 的论文数据。首页介绍正文仍直接写在 `_pages/about.md`。当前侧栏模板是 `_includes/academic-profile.html`，不是原模板的 `_includes/author-profile.html`。
+首页、论文页和 CV 共用 `_data/cv.json` 的论文数据。首页介绍正文仍直接写在 `_pages/about.md`。网站采用单栏版式，顶部信息栏在 `_includes/masthead.html`；原来的侧栏模板 `_includes/academic-profile.html` 已删除。
 
 常见字段对应关系：
 
-- `basics.name`：侧栏与 CV 展示姓名；`basics.publicationName`：论文作者加粗匹配，不修改论文作者原文。
-- `basics.email`、`basics.institution`、`basics.location`：侧栏与 CV 联系信息。
-- `basics.label`、`basics.summary`、`basics.profiles`：CV 的身份、研究简介和外部链接；不会自动重写首页介绍。
-- `_config.yml` 的 `author.bio`、`author.avatar`、`author.googlescholar`、`author.github`、`author.orcid`：当前侧栏对应内容。`author.bio` 中的 ` · ` 会被渲染为换行。
+- `basics.name`：顶部信息栏与 CV 展示姓名；`basics.publicationName`：论文作者加粗匹配，不修改论文作者原文。
+- `basics.label`、`basics.institution`、`basics.labUrl`、`basics.email`：顶部信息栏的身份、单位与实验室链接、邮箱；CV 打印版也使用这些字段。
+- `basics.summary`、`basics.profiles`：CV 的研究简介和外部链接；不会自动重写首页介绍。
+- `_config.yml` 的 `author.avatar`、`author.googlescholar`、`author.github`、`author.orcid`：顶部头像和学术链接。
 - 修改展示姓名时，同步 `_config.yml` 的 `title`、`name`、`author.name`、`social.name` 和 JSON 的 `basics.name`；页面 `excerpt` 中的姓名与全站 `description` 也需同步。
-- 修改身份/单位时，同步侧栏字段、`basics.label` / `basics.institution` 和首页正文；修改学术链接时，同步配置与 `basics.profiles`。
-- 当前模板不会自动显示所有社交字段：例如新增 LinkedIn，除了填配置，还需在 `_includes/academic-profile.html` 中添加链接。
+- 修改身份/单位时，同步 `basics.label` / `basics.institution` 和首页正文；修改学术链接时，同步配置与 `basics.profiles`。
+- 当前模板不会自动显示所有社交字段：例如新增 LinkedIn，除了填配置，还需在 `_includes/masthead.html` 中添加链接。
 
 ## 添加论文
 
@@ -117,12 +120,22 @@ CV 页面支持 Print / Save as PDF。用户提供的旧 CV 仅用作教育信�
 
 本地修改与 GitHub 同步是分开的步骤；远端状态以 Git 提交及仓库设置为准。
 
-## 参考主页后的新版布局
+## 单栏版式（2026-10-23）
 
-- 侧栏模板：`_includes/academic-profile.html`。身份简介、照片和学术链接读取 `_config.yml`，姓名、中文名、单位、邮箱和城市读取 `_data/cv.json`。
-- 首页研究方向读取 `interests` 数组。论文条目中的 `news: true` 会进入 Recent updates，按日期倒序展示最近四条。
-- 首页精选论文通过 `featured: true` 控制；`image` 是本地研究图路径，`imageAlt` 是图像说明，`shortVenue` 是可选的图上会议/期刊标签。
-- 图片在首页与论文页显示，CV 保持紧凑的文字列表，打印时也不显示图片。
-- 新版截图为 `local/home-reference-desktop.png`、`local/home-reference-mobile.png` 和 `local/home-reference-dark.png`。
-- Recent updates 当前只支持论文动态；讲座、获奖、入职等独立新闻需要修改 `_pages/about.md` 的新闻列表，或另外实现新闻数据文件，不能直接写进 `publications`。
+版式参考 [Yilun Du 的主页](https://yilundu.github.io/)：顶部头像与姓名、斜杠分隔的导航条、研究方向卡片，以及可在 Selected 与 All 之间切换、可按主题筛选的论文列表。
+
+- **顶部信息栏**（`_includes/masthead.html`）：首页的姓名是 `h1`，其他页面的姓名链接回首页，页面标题另起 `h1`。深色模式按钮在导航条右侧。
+- **导航**（`_data/navigation.yml`）：About、Research、News、Publications、Teaching 指向首页各区块，CV 指向 `/cv/`。手机上导航换行，改用间距分隔。
+- **研究方向**：读取 `interests` 数组。`id` 供论文的 `topics` 引用，`label` 是筛选按钮和论文卡片上的短名称，`name` 和 `description` 显示在卡片上，`examples` 列出代表作的论文 `id`。代表作显示为“`shortName`: `summary`”，链接到项目页（没有项目页时链接论文）。`summary` 的首字母会自动转为小写，因此不要以缩写开头。点击卡片标题会切到 All 视图并按该方向筛选。
+- **论文字段**：
+  - `topics`：所属研究方向的 `id` 列表，可以为空。
+  - `shortName`：代表作和占位框使用的简称。
+  - `featured`：是否进入 Selected 视图，Selected 按数组顺序排列，All 按日期倒序。
+  - 粗体出处：优先使用 `shortVenue`（例如 `TR-C 2026`）；否则预印本和 Manuscript 显示为“状态 + 年份”，期刊和会议显示为“`publisher` + 年份”。
+  - `underReview`：在主题行显示为“Under review at …”（冒号后的副标题省略），CV 中显示全名。
+  - 没有 `image` 的论文显示一个写着出处的占位框。
+- **News & updates**：仍由论文的 `news: true` 生成，取最近四条。讲座、获奖、入职等不属于论文的动态不能写进 `publications`，需要改 `_pages/about.md` 的列表，或另建新闻数据文件。Teaching 读取 `teaching` 数组，格式与 News 一致。
+- 改版截图：`local/redesign-home-desktop.png`、`local/redesign-home-mobile.png`、`local/redesign-home-dark.png`、`local/redesign-publications-all.png`。
+- **无 JavaScript 时**：只显示 Selected 论文并隐藏切换和筛选控件，页面会提示完整列表在 `/publications/`。论文页按类型分组，始终显示全部论文。
+- **CV**：屏幕上不重复显示姓名块，因为顶部信息栏已经有；打印时隐藏顶部信息栏、导航和配图，改为显示姓名、联系方式和紧凑的论文列表。
 - `local/` 下的截图和 PDF 是导出快照，不会随网页内容自动更新；更新 CV 后请在网页重新打印/保存 PDF。

@@ -5,12 +5,9 @@ permalink: /publications/
 author_profile: true
 excerpt: "Publications and preprints by Jiaxi (Jay) Liu on cooperative perception, vehicle-road-cloud systems, and autonomous driving."
 ---
-<p class="page-intro">Journal articles, conference papers, preprints, and manuscripts. For citation information, visit my <a href="{{ site.author.googlescholar | escape }}">Google Scholar profile</a>.</p>
+<p class="page-intro">Journal articles, conference papers, preprints, and manuscripts, grouped by type. For citation information, visit my <a href="{{ site.author.googlescholar | escape }}">Google Scholar profile</a>.</p>
 <nav class="publication-jump-links" aria-label="Publication categories">
-  <a href="#journal-articles">Journal articles</a>
-  <a href="#conference-papers">Conference papers</a>
-  <a href="#preprints">Preprints</a>
-  <a href="#manuscripts">Manuscripts</a>
+  <a href="#journal-articles">Journal articles</a><a href="#conference-papers">Conference papers</a><a href="#preprints">Preprints</a><a href="#manuscripts">Manuscripts</a>
 </nav>
 {% assign sorted_publications = site.data.cv.publications | sort: 'releaseDate' | reverse %}
 {% assign categories = 'Journal article|Conference paper|Preprint|Manuscript' | split: '|' %}
@@ -19,11 +16,13 @@ excerpt: "Publications and preprints by Jiaxi (Jay) Liu on cooperative perceptio
 {% for category in categories %}
   {% assign publications = sorted_publications | where: 'status', category %}
   {% if publications.size > 0 %}
-  <section aria-labelledby="{{ anchors[forloop.index0] }}">
+  <section class="content-section" aria-labelledby="{{ anchors[forloop.index0] }}">
     <h2 id="{{ anchors[forloop.index0] }}">{{ headings[forloop.index0] }} <span class="section-count">{{ publications.size }}</span></h2>
+    <div class="publication-list">
     {% for publication in publications %}
       {% include publication-card.html publication=publication %}
     {% endfor %}
+    </div>
   </section>
   {% endif %}
 {% endfor %}

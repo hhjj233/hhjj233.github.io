@@ -71,20 +71,45 @@
   "languages": [],
   "interests": [
     {
+      "id": "cooperation",
+      "label": "Cooperative perception",
       "name": "Cooperation under limited communication",
-      "description": "Identifying safety-relevant blind spots and deciding when, with whom, and what to share."
+      "description": "Identifying safety-relevant blind spots and deciding when, with whom, and what to share.",
+      "examples": [
+        "sra-cp",
+        "cats-v2v",
+        "collaborative-perception-review"
+      ]
     },
     {
+      "id": "sensing",
+      "label": "Infrastructure sensing",
       "name": "Sensing beyond the vehicle",
-      "description": "Using roadside infrastructure and UWB measurements to reconstruct work zones and support connected driving."
+      "description": "Using roadside infrastructure and UWB measurements to reconstruct work zones and support connected driving.",
+      "examples": [
+        "v2i-workzone",
+        "gaia"
+      ]
     },
     {
+      "id": "language",
+      "label": "Language-guided driving",
       "name": "Language-guided driving",
-      "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control."
+      "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control.",
+      "examples": [
+        "sage",
+        "vlm-mpc",
+        "hermes"
+      ]
     },
     {
+      "id": "testing",
+      "label": "Safety testing",
       "name": "Calibrated safety testing",
-      "description": "Generating corner-case scenarios whose adversity is set as a percentile of the natural risk in the same traffic context."
+      "description": "Generating corner-case scenarios whose adversity is set as a percentile of the natural risk in the same traffic context.",
+      "examples": [
+        "corner-percentile"
+      ]
     }
   ],
   "references": [],
@@ -92,6 +117,10 @@
     {
       "id": "corner-percentile",
       "featured": true,
+      "topics": [
+        "testing"
+      ],
+      "shortName": "How corner is a corner case?",
       "summary": "Percentile-controlled generation of highway corner cases, indexing each scenario's adversity by its risk percentile among the natural futures of the same traffic context.",
       "name": "How corner is a corner case? Percentile control for highway scenario generation",
       "authors": [
@@ -119,6 +148,10 @@
     {
       "id": "sage",
       "featured": true,
+      "topics": [
+        "language"
+      ],
+      "shortName": "SAGE",
       "summary": "Work-zone pathway prediction that re-ranks geometric candidate paths with a vision-language model's trajectory and checks the choice against MUTCD-derived rules.",
       "name": "SAGE: A hybrid vision–language and geometry framework for work-zone pathway prediction under temporary traffic control",
       "authors": [
@@ -143,6 +176,10 @@
     {
       "id": "sra-cp",
       "featured": true,
+      "topics": [
+        "cooperation"
+      ],
+      "shortName": "SRA-CP",
       "summary": "Risk-aware cooperation that selects perception partners and shares safety-relevant information under limited communication bandwidth.",
       "name": "SRA-CP: Spontaneous Risk-Aware Selective Cooperative Perception",
       "authors": [
@@ -167,6 +204,10 @@
     {
       "id": "v2i-workzone",
       "featured": true,
+      "topics": [
+        "sensing"
+      ],
+      "shortName": "V2I work-zone reconstruction",
       "summary": "Pose-conditioned UWB range denoising for reconstructing work-zone geometry from vehicle-to-infrastructure measurements.",
       "name": "V2I Work Zone Geometry Reconstruction with Pose-Conditioned UWB Range Denoising",
       "authors": [
@@ -193,6 +234,10 @@
     {
       "id": "cats-v2v",
       "featured": true,
+      "topics": [
+        "cooperation"
+      ],
+      "shortName": "CATS-V2V",
       "summary": "A real-world cooperative perception dataset covering adverse weather, varied lighting, and complex traffic environments.",
       "name": "CATS-V2V: A Real-World Vehicle-to-Vehicle Cooperative Perception Dataset with Complex Adverse Traffic Scenarios",
       "authors": [
@@ -232,6 +277,10 @@
     {
       "id": "vlm-mpc",
       "featured": true,
+      "topics": [
+        "language"
+      ],
+      "shortName": "VLM-MPC",
       "summary": "A closed-loop driving controller combining vision-language reasoning with model predictive control.",
       "name": "VLM-MPC: Model predictive controller augmented vision language model for autonomous driving",
       "authors": [
@@ -257,6 +306,8 @@
     {
       "id": "pi-koopman",
       "featured": false,
+      "topics": [],
+      "shortName": "PI-Koopman",
       "summary": "Physics-informed Koopman learning that corrects a calibrated car-following law to identify automated-vehicle dynamics from short, noisy trajectories, with the CATS-CF car-following dataset.",
       "name": "Physics-Informed Koopman Learning for Data-Efficient System Identification of Automated Vehicle Dynamics",
       "authors": [
@@ -277,11 +328,15 @@
       "website": "https://arxiv.org/abs/2610.24588",
       "arxiv": "2610.24588",
       "code": "https://github.com/CATS-Lab/PI-Koopman",
-      "news": false
+      "news": false,
+      "image": "/images/publications/pi-koopman.webp",
+      "imageAlt": "PI-Koopman framework from traffic observation to physics-informed Koopman learning and its applications, from Figure 1 of the paper."
     },
     {
       "id": "traffic-detection",
       "featured": false,
+      "topics": [],
+      "shortName": "Lane-level crash detection",
       "summary": "Lane-level detection of abnormal freeway traffic using sparse vehicle telematics.",
       "name": "Real-time lane-level abnormal traffic detection on freeways using sparse telematics data",
       "authors": [
@@ -305,11 +360,17 @@
       "doi": "10.1016/j.aap.2026.108607",
       "volume": "234",
       "pages": "108607",
-      "news": true
+      "news": true,
+      "image": "/images/publications/traffic-detection.webp",
+      "imageAlt": "Crash location on a segment of I-94 in Milwaukee and the corresponding time-space diagram, from Figure 2 of the paper."
     },
     {
       "id": "risk-occupancy",
       "featured": false,
+      "topics": [
+        "cooperation"
+      ],
+      "shortName": "Risk Occupancy",
       "summary": "A compact representation of spatial and temporal driving risk for vehicle-road-cloud perception and planning.",
       "name": "Risk Occupancy: A New and Efficient Paradigm Through Vehicle-Road-Cloud Collaboration",
       "authors": [
@@ -331,11 +392,18 @@
       "doi": "10.1109/tits.2026.3707600",
       "volume": "27",
       "pages": "10631-10641",
-      "news": false
+      "news": false,
+      "image": "/images/publications/risk-occupancy.webp",
+      "imageAlt": "4D risk occupancy of a traffic scene, from Figure 1(b) of the paper.",
+      "shortVenue": "IEEE T-ITS 2026"
     },
     {
       "id": "gaia",
       "featured": false,
+      "topics": [
+        "sensing"
+      ],
+      "shortName": "GAIA",
       "summary": "Geometry-aware UWB denoising that couples temporal range modeling with anchor-layout estimation for work-zone reconstruction.",
       "name": "Geometry-Aware Infrastructure-Anchored Denoiser for UWB Sensing and Work-Zone Reconstruction",
       "authors": [
@@ -353,11 +421,18 @@
       "status": "Preprint",
       "website": "https://arxiv.org/abs/2607.05449",
       "arxiv": "2607.05449",
-      "news": true
+      "news": true,
+      "image": "/images/publications/gaia.webp",
+      "imageAlt": "Work-zone scenario, limitations of existing approaches, and the proposed GAIA approach, from Figure 1 of the paper."
     },
     {
       "id": "v2x-qa",
       "featured": false,
+      "topics": [
+        "language",
+        "cooperation"
+      ],
+      "shortName": "V2X-QA",
       "summary": "A dataset and benchmark for multimodal reasoning across vehicle, infrastructure, and cooperative viewpoints.",
       "name": "V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views",
       "authors": [
@@ -378,11 +453,17 @@
       "website": "https://arxiv.org/abs/2604.02710",
       "arxiv": "2604.02710",
       "code": "https://github.com/junwei0001/V2X-QA",
-      "news": false
+      "news": false,
+      "image": "/images/publications/v2x-qa.webp",
+      "imageAlt": "Overview of the V2X-QA tasks across ego-vehicle, infrastructure, and cooperative views, from Figure 1 of the paper."
     },
     {
       "id": "hermes",
       "featured": false,
+      "topics": [
+        "language"
+      ],
+      "shortName": "HERMES",
       "summary": "Risk-aware multimodal trajectory planning that incorporates semantic guidance for long-tail driving scenarios.",
       "name": "HERMES: A Holistic End-to-End Risk-Aware Multimodal Embodied System with Vision-Language Models for Long-Tail Autonomous Driving",
       "authors": [
@@ -402,11 +483,15 @@
       "status": "Preprint",
       "website": "https://arxiv.org/abs/2602.00993",
       "arxiv": "2602.00993",
-      "news": false
+      "news": false,
+      "image": "/images/publications/hermes.webp",
+      "imageAlt": "Comparison of end-to-end, VLM-based, and HERMES driving frameworks, from Figure 1 of the paper."
     },
     {
       "id": "followgen",
       "featured": false,
+      "topics": [],
+      "shortName": "FollowGen",
       "summary": "Conditional diffusion for car-following trajectory prediction, incorporating vehicle dynamics and inter-vehicle interactions.",
       "name": "FollowGen: A scaled noise conditional diffusion model for car-following trajectory prediction",
       "authors": [
@@ -431,11 +516,17 @@
       "doi": "10.1016/j.commtr.2025.100215",
       "volume": "5",
       "pages": "100215",
-      "news": false
+      "news": false,
+      "image": "/images/publications/followgen.webp",
+      "imageAlt": "FollowGen training and sampling processes for car-following trajectory prediction, from Figure 1 of the paper."
     },
     {
       "id": "collaborative-perception-review",
       "featured": false,
+      "topics": [
+        "cooperation"
+      ],
+      "shortName": "Collaborative perception review",
       "summary": "A review of vehicle-road-cloud collaborative perception architectures, fusion methods, and deployment challenges.",
       "name": "Vehicle-Road-Cloud Collaborative Perception Framework and Key Technologies: A Review",
       "authors": [
@@ -453,11 +544,14 @@
       "doi": "10.1109/tits.2024.3459799",
       "volume": "25",
       "pages": "19295-19318",
-      "news": false
+      "news": false,
+      "shortVenue": "IEEE T-ITS 2024"
     },
     {
       "id": "sdmap-survey",
       "featured": false,
+      "topics": [],
+      "shortName": "SDMap survey",
       "summary": "A survey of local map construction using standard-definition maps as priors for intelligent driving.",
       "name": "Local Map Construction with SDMap: A Comprehensive Survey",
       "authors": [
@@ -473,7 +567,9 @@
       "status": "Preprint",
       "website": "https://arxiv.org/abs/2409.02415",
       "arxiv": "2409.02415",
-      "news": false
+      "news": false,
+      "image": "/images/publications/sdmap-survey.webp",
+      "imageAlt": "General pipeline of local map construction with SDMap, from Figure 2 of the survey."
     }
   ],
   "presentations": [],

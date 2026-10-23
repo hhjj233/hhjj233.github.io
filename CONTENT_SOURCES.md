@@ -76,6 +76,14 @@
 | `images/publications/vlm-mpc.webp` | [VLM-MPC 预印本](https://arxiv.org/pdf/2408.04821) 第 5 页 Figure 1，提取原始嵌入图像及其透明蒙版 |
 | `images/publications/corner-percentile.webp` | [Corner Percentile 项目页首屏视频封面](https://hhjj233.github.io/CornerPercentile/static/videos/hero_poster.jpg) |
 | `images/publications/sage.webp` | [SAGE 项目页 teaser](https://hhjj233.github.io/SAGE-page/static/images/teaser_grid.jpg) |
+| `images/publications/pi-koopman.webp` | [arXiv HTML Figure 1](https://arxiv.org/html/2610.24588v2/response_framework.png) |
+| `images/publications/traffic-detection.webp` | [arXiv HTML Figure 2](https://arxiv.org/html/2511.18148v1/figures/crash_distribution.png) |
+| `images/publications/risk-occupancy.webp` | [arXiv HTML Figure 1(b)](https://arxiv.org/html/2408.07367v3/images/first_page/3d.png) |
+| `images/publications/gaia.webp` | [arXiv HTML Figure 1](https://arxiv.org/html/2607.05449v1/fig1.png) |
+| `images/publications/v2x-qa.webp` | [arXiv HTML Figure 1](https://arxiv.org/html/2604.02710v1/fig1.png) |
+| `images/publications/hermes.webp` | [arXiv HTML Figure 1](https://arxiv.org/html/2602.00993v3/Fig1.png) |
+| `images/publications/followgen.webp` | [arXiv HTML Figure 1](https://arxiv.org/html/2411.16747v1/Fig1.png) |
+| `images/publications/sdmap-survey.webp` | [arXiv HTML Figure 2](https://arxiv.org/html/2409.02415v3/images/new/general.png) |
 
 ## GitHub 内容整理（2026-10-23）
 
@@ -98,3 +106,18 @@
 - `CP`：2024 年的占位 README，链接和引用均为占位内容。
 - `cee571`：考试计时页，不属于学术主页内容。
 - CATS-Lab 中无本人提交的仓库。
+
+## 单栏改版（2026-10-23）
+
+用户希望学习 [Yilun Du 的主页](https://yilundu.github.io/) 的风格。参考其整体版式与配色，重新编写了布局、样式和脚本：顶部信息栏、斜杠导航、研究方向卡片、News 列表，以及 Selected/All 论文列表。没有复制对方的文字、论文或研究框架图，也没有加入新的研究陈述。
+
+- 首页开头的研究陈述沿用原有的一句介绍；研究方向的名称和说明保持不变。
+- 研究方向卡片的代表作只选用本人论文，说明文字取自各论文已有的 `summary`。
+- 论文主题标签由内容判断，未归入任何方向的论文只在 All 视图中出现：
+  - Cooperative perception：SRA-CP、CATS-V2V、Risk Occupancy、V2X-QA、协同感知综述。
+  - Infrastructure sensing：V2I work zone、GAIA。
+  - Language-guided driving：SAGE、VLM-MPC、HERMES、V2X-QA。
+  - Safety testing：Corner Percentile。
+  - 未归类：PI-Koopman、lane-level crash detection、FollowGen、SDMap survey。
+- 为了让 All 视图中的每篇论文都有配图，从 arXiv HTML 版取了 8 张图（见上表），按原像素尺寸编码为 WebP，透明背景铺白。协同感知综述没有开放获取的图，显示出处占位框。
+- 两篇 T-ITS 论文新增 `shortVenue`（IEEE T-ITS 2026 / 2024），用于粗体出处。
