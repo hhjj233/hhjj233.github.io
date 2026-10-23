@@ -107,6 +107,7 @@
       "releaseDate": "2026-10-04",
       "publisher": "arXiv",
       "status": "Preprint",
+      "underReview": "Transportation Research Part C: Emerging Technologies",
       "website": "https://arxiv.org/abs/2610.05003",
       "arxiv": "2610.05003",
       "project": "https://hhjj233.github.io/CornerPercentile/",
@@ -481,9 +482,22 @@
       "course": "CEE 571: Urban Transportation Planning",
       "term": "Fall 2026",
       "institution": "University of Wisconsin–Madison",
+      "role": "Teaching Assistant and Guest Lecturer",
       "name": "Transportation Planning Software",
       "summary": "an interactive lecture companion with five browser demos set in one hypothetical city, covering the four-step travel demand model, walking access to transit, and zone size.",
       "url": "https://hhjj233.github.io/cee571-planning-software/"
+    },
+    {
+      "course": "CEE 678: Advanced Traffic Modeling and Computer Simulation",
+      "term": "Spring 2026",
+      "institution": "University of Wisconsin–Madison",
+      "role": "Teaching Assistant"
+    },
+    {
+      "course": "CEE 579: Seminar-Transportation Engineering",
+      "term": "Fall 2025",
+      "institution": "University of Wisconsin–Madison",
+      "role": "Teaching Assistant"
     }
   ],
   "portfolio": []

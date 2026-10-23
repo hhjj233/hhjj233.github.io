@@ -22,7 +22,7 @@
 
 | 记录 | 当前展示 | 核对来源 |
 | --- | --- | --- |
-| Corner Percentile（How corner is a corner case?） | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.05003)、[项目页](https://hhjj233.github.io/CornerPercentile/)、[代码](https://github.com/hhjj233/P-control-SG) |
+| Corner Percentile（How corner is a corner case?） | Preprint, 2026；TR-C 审稿中 | 用户确认（2026-10-23）、[arXiv](https://arxiv.org/abs/2610.05003)、[项目页](https://hhjj233.github.io/CornerPercentile/)、[代码](https://github.com/hhjj233/P-control-SG) |
 | PI-Koopman | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.24588)、[代码与 CATS-CF 数据](https://github.com/CATS-Lab/PI-Koopman) |
 | SAGE | Manuscript, 2026 | [项目页](https://hhjj233.github.io/SAGE-page/)（作者、标题取自页面 `citation_*` 元数据与 README） |
 | VLM-MPC | Transportation Research Part C, 2026 | [Crossref](https://api.crossref.org/works/10.1016/j.trc.2025.105487)、[arXiv](https://arxiv.org/abs/2408.04821) |
@@ -83,10 +83,13 @@
 
 已加入网站：
 
-- **Corner Percentile**：本人公开仓库 `CornerPercentile`（项目页）与 `P-control-SG`（代码与预训练模型）。arXiv 元数据核对标题、作者顺序与首次提交日期 2026-10-04。代码 README 写明已投稿 TR-C；页面按其余预印本的处理方式只标 arXiv，不写审稿状态。
+- **Corner Percentile**：本人公开仓库 `CornerPercentile`（项目页）与 `P-control-SG`（代码与预训练模型）。arXiv 元数据核对标题、作者顺序与首次提交日期 2026-10-04。代码 README 写明已投稿 TR-C，用户于 2026-10-23 确认仍在审稿中。出处行写作 arXiv · Under review at *Transportation Research Part C: Emerging Technologies*（字段 `underReview`）。配图不加期刊标签，以免被误读为已发表。
 - **SAGE**：本人公开仓库 `SAGE-page`（项目页）。论文与代码尚未公开（代码仓库 `SAGE` 为私有），因此标为 `Manuscript`，只链接项目页，不进入 Recent updates。arXiv 发布后改为 `Preprint` 并补链接。
 - **PI-Koopman**：arXiv 2610.24588（2026-10-17），本人为第 8 作者；代码与 CATS-CF 数据在公开的 `CATS-Lab/PI-Koopman`。不作首页精选，也不进入 Recent updates。
-- **教学**：本人公开仓库 `cee571-planning-software`，即 CEE 571（Fall 2026）讲座 *Transportation Planning Software* 的互动配套网页。课程名依据 [UW–Madison Guide](https://guide.wisc.edu/courses/civ_engr/) 的 CIV ENGR 571 — Urban Transportation Planning。本人在该课的角色（如助教）未确认，页面不写角色。
+- **教学**：角色与学期由用户确认（2026-10-23），课程名依据 [UW–Madison Guide](https://guide.wisc.edu/courses/civ_engr/) 的正式名称。
+  - CEE 571 — Urban Transportation Planning，Fall 2026：助教，并讲授了几次课。用户问能否写 Lecturer。Lecturer 在 UW–Madison 是正式的教学职位，通常指课程的主讲教师，因此页面写作 *Teaching Assistant and Guest Lecturer*。配套网页来自本人公开仓库 `cee571-planning-software`，对应讲座 *Transportation Planning Software*。
+  - CEE 678 — Advanced Traffic Modeling and Computer Simulation，Spring 2026：助教。Guide 显示最近一次开课为 Spring 2026，与“上个学期”一致。
+  - CEE 579 — Seminar-Transportation Engineering，Fall 2025：助教。该课秋季开设，“上上个学期”按 Fall 2025 处理。
 - 新增研究方向 *Calibrated safety testing*，对应 Corner Percentile；CV 研究简介同步补上 scenario generation。
 
 未加入网站：

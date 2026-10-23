@@ -69,6 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--global-link-col
 .news-list time, .news-list .news-term { padding-top: 2px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; color: var(--profile-muted); }
 .news-list a { text-decoration: none; }
 .news-list a:hover { text-decoration: underline; }
+.teaching-list li { grid-template-columns: 90px minmax(0, 1fr); }
 .section-heading { display: flex; align-items: baseline; gap: 16px; justify-content: space-between; border-bottom: 1px solid var(--global-border-color); margin-top: 38px; }
 .section-heading h2 { border: 0; margin: 0; }
 .section-heading > a { flex-shrink: 0; font-size: 13px; text-decoration: none; }
@@ -147,6 +148,7 @@ a.profile-link-primary, button.profile-link-primary { background: #245d86; color
   .research-directions li { font-size: 14px; }
   .news-list li { grid-template-columns: 58px minmax(0, 1fr); gap: 11px; font-size: 13px; }
   .news-list time, .news-list .news-term { font-size: 10px; }
+  .teaching-list li { grid-template-columns: 72px minmax(0, 1fr); }
   .publication-with-image { grid-template-columns: 1fr; gap: 16px; }
   .publication-visual { max-width: 280px; width: 100%; margin: 0; min-height: 164px; }
   .publication-visual img { height: 152px; }

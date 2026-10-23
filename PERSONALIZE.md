@@ -52,15 +52,19 @@
 - `status` 使用 `Journal article`、`Conference paper`、`Preprint` 或 `Manuscript`，决定论文页分组。`Manuscript` 用于还没有预印本、只有项目页的论文：`publisher` 留空时卡片不显示出处行。Recent updates 的文字只区分预印本与正式发表，因此 `Manuscript` 不要设 `news: true`。
 - `releaseDate` 可为年份、年月或完整日期；按已知精度填写，不补造日期。
 - `featured: true` 显示在首页；首页按数组顺序排列，论文页和 CV 自动按日期倒序排列。
-- 可选字段：`doi`、`volume`、`pages`、`pdf`、`project`、`code`。
+- 可选字段：`doi`、`volume`、`pages`、`pdf`、`project`、`code`、`underReview`。`underReview` 填在审期刊的全名，出处行显示为“Under review at …”；录用后删除该字段，改填正式出处。
 - 预印本转正式发表时，更新原条目的标题、作者、年份和期刊/会议，保留 `arxiv`，避免重复列出。
 - `Manuscript` 发布 arXiv 后（如 SAGE），把 `status` 改为 `Preprint`，`publisher` 填 `arXiv`，补 `arxiv` 和完整 `releaseDate`，`website` 改为 arXiv 链接，项目页留在 `project`，按需设 `news: true`。
+- 展示姓名使用 `basics.name`（当前为 `Jiaxi (Jay) Liu`）；论文署名通过 `basics.publicationName`（`Jiaxi Liu`）匹配并自动加粗。
+- 当前不使用 `_publications/` 中的模板数据，也不要运行旧的 `scripts/update_cv_json.sh` / `scripts/cv_markdown_to_json.py` 来覆盖 JSON；旧转换器只理解模板版 Markdown CV。
 
 ## 教学
 
-`teaching` 数组的每一项会同时显示在首页 Teaching 和 CV 中，数组为空时两处都隐藏。字段为 `course`、`term`、`institution`、`name`（链接文字）、`summary` 和 `url`。首页渲染为“`name`: `summary`”，所以 `summary` 以小写开头。
-- 展示姓名使用 `basics.name`（当前为 `Jiaxi (Jay) Liu`）；论文署名通过 `basics.publicationName`（`Jiaxi Liu`）匹配并自动加粗。
-- 当前不使用 `_publications/` 中的模板数据，也不要运行旧的 `scripts/update_cv_json.sh` / `scripts/cv_markdown_to_json.py` 来覆盖 JSON；旧转换器只理解模板版 Markdown CV。
+`teaching` 数组的每一项同时显示在首页 Teaching 和 CV 中，按数组顺序排列（新学期在前），数组为空时两处都隐藏。
+
+- 必填：`course`、`term`、`institution`、`role`。`institution` 与 `basics.institution` 相同时首页不重复显示，CV 中总是显示。
+- 可选：`url`、`name`（链接文字）、`summary`，用于课程材料链接。首页渲染为“`name`: `summary`”，所以 `summary` 以小写开头。
+- `role` 按实际聘任填写，例如 `Teaching Assistant`；讲过课的写作 `Teaching Assistant and Guest Lecturer`。Lecturer 在 UW–Madison 是正式的教学职位，不要单独使用。
 
 ## 本地预览
 

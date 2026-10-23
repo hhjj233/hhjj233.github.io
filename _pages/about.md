@@ -54,11 +54,11 @@ redirect_from:
 {% if cv.teaching.size > 0 %}
 <section id="teaching" aria-labelledby="teaching-title">
   <h2 id="teaching-title">Teaching</h2>
-  <ul class="news-list">
+  <ul class="news-list teaching-list">
     {% for item in cv.teaching %}
     <li>
       <span class="news-term">{{ item.term }}</span>
-      <div><strong>{{ item.course }}</strong>, {{ item.institution }}. <a href="{{ item.url | escape }}">{{ item.name }}</a>: {{ item.summary }}</div>
+      <div><strong>{{ item.course }}</strong>{% if item.institution != cv.basics.institution %}, {{ item.institution }}{% endif %} · {{ item.role }}.{% if item.url %} <a href="{{ item.url | escape }}">{{ item.name }}</a>: {{ item.summary }}{% endif %}</div>
     </li>
     {% endfor %}
   </ul>

@@ -14,7 +14,8 @@
   </div>
   <h3><a href="{{ publication.website | escape }}">{{ publication.name | escape }}</a></h3>
   <p class="publication-authors">{% for author in publication.authors %}{% if author == publication_author %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
-  {% if publication.publisher and publication.publisher != '' %}<p class="publication-venue"><em>{{ publication.publisher | escape }}</em>{% if publication.volume and publication.volume != '' %}, {{ publication.volume }}{% endif %}{% if publication.pages and publication.pages != '' %}, {{ publication.pages }}{% endif %}</p>{% endif %}
+  {% if publication.publisher and publication.publisher != '' %}{% assign has_publisher = true %}{% else %}{% assign has_publisher = false %}{% endif %}
+  {% if has_publisher or publication.underReview %}<p class="publication-venue">{% if has_publisher %}<em>{{ publication.publisher | escape }}</em>{% if publication.volume and publication.volume != '' %}, {{ publication.volume }}{% endif %}{% if publication.pages and publication.pages != '' %}, {{ publication.pages }}{% endif %}{% endif %}{% if publication.underReview %}{% if has_publisher %} · {% endif %}Under review at <em>{{ publication.underReview | escape }}</em>{% endif %}</p>{% endif %}
   {% unless include.compact %}<p class="publication-summary">{{ publication.summary | escape }}</p>{% endunless %}
   <div class="publication-links">
     {% if publication.doi %}<a href="{{ publication.website | escape }}">DOI</a>{% endif %}
