@@ -153,7 +153,7 @@
       ],
       "shortName": "SAGE",
       "summary": "Work-zone pathway prediction that re-ranks geometric candidate paths with a vision-language model's trajectory and checks the choice against MUTCD-derived rules.",
-      "name": "SAGE: A hybrid vision–language and geometry framework for work-zone pathway prediction under temporary traffic control",
+      "name": "SAGE: A hybrid vision-language and geometry framework for work-zone pathway prediction under temporary traffic control",
       "authors": [
         "Jiaxi Liu",
         "Keshu Wu",
@@ -164,12 +164,13 @@
         "Steven T. Parker",
         "Bin Ran"
       ],
-      "releaseDate": "2026",
-      "publisher": "",
-      "status": "Manuscript",
-      "website": "https://hhjj233.github.io/SAGE-page/",
+      "releaseDate": "2026-10-22",
+      "publisher": "arXiv",
+      "status": "Preprint",
+      "website": "https://arxiv.org/abs/2610.31835",
+      "arxiv": "2610.31835",
       "project": "https://hhjj233.github.io/SAGE-page/",
-      "news": false,
+      "news": true,
       "image": "/images/publications/sage.webp",
       "imageAlt": "SAGE path predictions overlaid on nine ROADWork work-zone scenes from U.S. cities, from the project page."
     },

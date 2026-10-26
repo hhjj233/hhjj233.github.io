@@ -57,7 +57,7 @@
 - `featured: true` 显示在首页；首页按数组顺序排列，论文页和 CV 自动按日期倒序排列。
 - 可选字段：`doi`、`volume`、`pages`、`pdf`、`project`、`code`、`underReview`。`underReview` 填在审期刊的全名，出处行显示为“Under review at …”；录用后删除该字段，改填正式出处。
 - 预印本转正式发表时，更新原条目的标题、作者、年份和期刊/会议，保留 `arxiv`，避免重复列出。
-- `Manuscript` 发布 arXiv 后（如 SAGE），把 `status` 改为 `Preprint`，`publisher` 填 `arXiv`，补 `arxiv` 和完整 `releaseDate`，`website` 改为 arXiv 链接，项目页留在 `project`，按需设 `news: true`。
+- `Manuscript` 发布 arXiv 后，把 `status` 改为 `Preprint`，`publisher` 填 `arXiv`，补 `arxiv` 和完整 `releaseDate`，`website` 改为 arXiv 链接，项目页留在 `project`，按需设 `news: true`。
 - 展示姓名使用 `basics.name`（当前为 `Jiaxi (Jay) Liu`）；论文署名通过 `basics.publicationName`（`Jiaxi Liu`）匹配并自动加粗。
 - 当前不使用 `_publications/` 中的模板数据，也不要运行旧的 `scripts/update_cv_json.sh` / `scripts/cv_markdown_to_json.py` 来覆盖 JSON；旧转换器只理解模板版 Markdown CV。
 

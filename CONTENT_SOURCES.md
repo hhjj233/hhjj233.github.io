@@ -18,13 +18,13 @@
 
 [关联资料页](https://www.alphaxiv.org/@jiaxi-liu-2) 同时链接相同的 Scholar ID 和上述 CATS Lab 个人页面，用作检索线索。论文的标题、作者顺序、年份、期刊等再向 arXiv、Crossref（出版商提交的元数据）和 CVF 正式论文核对。没有采用同名上海交通大学学生的资料。
 
-下列是当前已核对的 15 项记录（含 1 项尚无预印本的 Manuscript），不宣称完整覆盖 Scholar。期刊版本与其预印本合并为一项，保留预印本链接。
+下列是当前已核对的 15 项记录，不宣称完整覆盖 Scholar。期刊版本与其预印本合并为一项，保留预印本链接。
 
 | 记录 | 当前展示 | 核对来源 |
 | --- | --- | --- |
 | Corner Percentile（How corner is a corner case?） | Preprint, 2026；TR-C 审稿中 | 用户确认（2026-10-23）、[arXiv](https://arxiv.org/abs/2610.05003)、[项目页](https://hhjj233.github.io/CornerPercentile/)、[代码](https://github.com/hhjj233/P-control-SG) |
 | PI-Koopman | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.24588)、[代码与 CATS-CF 数据](https://github.com/CATS-Lab/PI-Koopman) |
-| SAGE | Manuscript, 2026 | [项目页](https://hhjj233.github.io/SAGE-page/)（作者、标题取自页面 `citation_*` 元数据与 README） |
+| SAGE | Preprint, 2026 | [arXiv](https://arxiv.org/abs/2610.31835)、[项目页](https://hhjj233.github.io/SAGE-page/) |
 | VLM-MPC | Transportation Research Part C, 2026 | [Crossref](https://api.crossref.org/works/10.1016/j.trc.2025.105487)、[arXiv](https://arxiv.org/abs/2408.04821) |
 | Real-time lane-level abnormal traffic detection | Accident Analysis & Prevention, 2026 | [Crossref](https://api.crossref.org/works/10.1016/j.aap.2026.108607)、[arXiv](https://arxiv.org/abs/2511.18148) |
 | Risk Occupancy | IEEE T-ITS, 2026 | [Crossref](https://api.crossref.org/works/10.1109/TITS.2026.3707600)、[arXiv](https://arxiv.org/abs/2408.07367) |
@@ -93,6 +93,7 @@
 
 - **Corner Percentile**：本人公开仓库 `CornerPercentile`（项目页）与 `P-control-SG`（代码与预训练模型）。arXiv 元数据核对标题、作者顺序与首次提交日期 2026-10-04。代码 README 写明已投稿 TR-C，用户于 2026-10-23 确认仍在审稿中。出处行写作 arXiv · Under review at *Transportation Research Part C: Emerging Technologies*（字段 `underReview`）。配图不加期刊标签，以免被误读为已发表。
 - **SAGE**：本人公开仓库 `SAGE-page`（项目页）。论文与代码尚未公开（代码仓库 `SAGE` 为私有），因此标为 `Manuscript`，只链接项目页，不进入 Recent updates。arXiv 发布后改为 `Preprint` 并补链接。
+  - 2026-10-26 更新：用户告知 SAGE 已发布在 arXiv。arXiv 2610.31835，v1 提交于 2026-10-22，作者与项目页一致，分类 cs.CV、cs.RO。条目已改为 `Preprint` 并加入 News。标题按 arXiv 记录写作 vision-language（连字符）。代码仓库仍为私有，暂不加 Code 链接。
 - **PI-Koopman**：arXiv 2610.24588（2026-10-17），本人为第 8 作者；代码与 CATS-CF 数据在公开的 `CATS-Lab/PI-Koopman`。不作首页精选，也不进入 Recent updates。
 - **教学**：角色与学期由用户确认（2026-10-23），课程名依据 [UW–Madison Guide](https://guide.wisc.edu/courses/civ_engr/) 的正式名称。
   - CEE 571 — Urban Transportation Planning，Fall 2026：助教，并讲授了几次课。用户问能否写 Lecturer。Lecturer 在 UW–Madison 是正式的教学职位，通常指课程的主讲教师，因此页面写作 *Teaching Assistant and Guest Lecturer*。配套网页来自本人公开仓库 `cee571-planning-software`，对应讲座 *Transportation Planning Software*。

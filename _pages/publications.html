@@ -5,14 +5,14 @@ permalink: /publications/
 author_profile: true
 excerpt: "Publications and preprints by Jiaxi (Jay) Liu on cooperative perception, vehicle-road-cloud systems, and autonomous driving."
 ---
-<p class="page-intro">Journal articles, conference papers, preprints, and manuscripts, grouped by type. For citation information, visit my <a href="{{ site.author.googlescholar | escape }}">Google Scholar profile</a>.</p>
-<nav class="publication-jump-links" aria-label="Publication categories">
-  <a href="#journal-articles">Journal articles</a><a href="#conference-papers">Conference papers</a><a href="#preprints">Preprints</a><a href="#manuscripts">Manuscripts</a>
-</nav>
+<p class="page-intro">All publications, grouped by type. For citation information, visit my <a href="{{ site.author.googlescholar | escape }}">Google Scholar profile</a>.</p>
 {% assign sorted_publications = site.data.cv.publications | sort: 'releaseDate' | reverse %}
 {% assign categories = 'Journal article|Conference paper|Preprint|Manuscript' | split: '|' %}
 {% assign headings = 'Journal articles|Conference papers|Preprints|Manuscripts' | split: '|' %}
 {% assign anchors = 'journal-articles|conference-papers|preprints|manuscripts' | split: '|' %}
+<nav class="publication-jump-links" aria-label="Publication categories">
+  {% for category in categories %}{% assign publications = sorted_publications | where: 'status', category %}{% if publications.size > 0 %}<a href="#{{ anchors[forloop.index0] }}">{{ headings[forloop.index0] }}</a>{% endif %}{% endfor %}
+</nav>
 {% for category in categories %}
   {% assign publications = sorted_publications | where: 'status', category %}
   {% if publications.size > 0 %}
