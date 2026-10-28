@@ -197,8 +197,6 @@ exclude:
   - files/bibtex1.bib
   - files/bibtex2.bib
   - files/bibtex3.bib
-  - PERSONALIZE.md
-  - CONTENT_SOURCES.md
   - CV_henry_liu_learning.pdf
   - _pages/cv-json.md
   - CONTRIBUTING.md
