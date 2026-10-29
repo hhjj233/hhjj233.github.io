@@ -62,12 +62,12 @@
       "endDate": "",
       "advisors": [
         {
-          "name": "Bin Ran",
-          "url": "https://topslab.wisc.edu/about/people/bin-ran/"
-        },
-        {
           "name": "Xiaopeng Li",
           "url": "https://catslab.engr.wisc.edu/staff/xiaopengli/"
+        },
+        {
+          "name": "Bin Ran",
+          "url": "https://topslab.wisc.edu/about/people/bin-ran/"
         }
       ]
     },

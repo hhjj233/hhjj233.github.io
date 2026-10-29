@@ -14,9 +14,7 @@ redirect_from:
   <h2 class="sr-only" id="about-title">About</h2>
   <p class="bio-lead">I study how vehicles and infrastructure can share useful information, understand their surroundings, and support safer driving decisions.</p>
   {% assign phd = cv.education | where: 'studyType', 'Ph.D.' | first %}
-  {% assign cats_lab = cv.basics.labs | where: 'name', 'CATS Lab' | first %}
-  {% assign tops_lab = cv.basics.labs | where: 'name', 'TOPS Lab' | first %}
-  <p>I am a Ph.D. candidate in <a href="https://engineering.wisc.edu/departments/civil-environmental-engineering/">Civil and Environmental Engineering</a> at the <a href="https://www.wisc.edu/">University of Wisconsin–Madison</a>, advised by {% include advisor-list.html advisors=phd.advisors %}. I am a Research Assistant in the <a href="{{ cats_lab.url }}">CATS Lab</a> and a member of the <a href="{{ tops_lab.url }}">TOPS Lab</a>. My research focuses on <strong>cooperative perception</strong>, <strong>vehicle-road-cloud systems</strong>, and <strong>AI for autonomous driving</strong>.</p>
+  <p>I am a Ph.D. candidate in <a href="https://engineering.wisc.edu/departments/civil-environmental-engineering/">Civil and Environmental Engineering</a> at the <a href="https://www.wisc.edu/">University of Wisconsin–Madison</a>, advised by {% include advisor-list.html advisors=phd.advisors %}. I am a member of {% for lab in cv.basics.labs %}{% if forloop.index > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}the <a href="{{ lab.url }}">{{ lab.name }}</a>{% endfor %}. My research focuses on <strong>cooperative perception</strong>, <strong>vehicle-road-cloud systems</strong>, and <strong>AI for autonomous driving</strong>.</p>
   <p>Previously, I received my master’s degree in Mechanical Engineering and bachelor’s degree in Vehicle Engineering from Tsinghua University.</p>
 </section>
 
