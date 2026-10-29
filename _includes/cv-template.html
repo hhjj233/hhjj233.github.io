@@ -2,7 +2,7 @@
 <div class="cv-actions"><button type="button" class="print-button" data-print-cv>Print / Save as PDF</button></div>
 <div class="cv-profile">
   <h2>{{ cv.basics.name }} <span lang="zh">{{ cv.basics.chineseName }}</span></h2>
-  <p>{{ cv.basics.label }}<br>{{ cv.basics.institution }}<br><a href="mailto:{{ cv.basics.email }}">{{ cv.basics.email }}</a></p>
+  <p>{{ cv.basics.label }}<br>{{ cv.basics.institution }}{% for lab in cv.basics.labs %} · {{ lab.name }}{% endfor %}<br><a href="mailto:{{ cv.basics.email }}">{{ cv.basics.email }}</a></p>
   <div class="profile-links">{% for profile in cv.basics.profiles %}<a href="{{ profile.url | escape }}">{{ profile.network }}</a>{% endfor %}</div>
 </div>
 <section class="content-section" aria-labelledby="cv-research">
@@ -25,6 +25,7 @@
   <div class="cv-entry">
     <div class="cv-entry-heading"><h3>{{ education.institution }}</h3><span>{% if education.endDate != '' %}{{ education.startDate }}–{{ education.endDate }}{% elsif education.status %}{{ education.status }}{% endif %}</span></div>
     <p>{{ education.studyType }} · {{ education.area }}</p>
+    {% if education.advisors %}<p class="cv-detail">Advisors: {% include advisor-list.html advisors=education.advisors %}</p>{% endif %}
     {% if education.detail %}<p class="cv-detail">{{ education.detail }}</p>{% endif %}
   </div>
   {% endfor %}

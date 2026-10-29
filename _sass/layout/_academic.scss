@@ -187,6 +187,8 @@ html.no-js [data-js-only] { display: none !important; }
   .avatar { width: 132px; height: 132px; justify-self: center; }
   .page-shell .profile-name { font-size: 34px; }
   .profile-chinese-name { display: block; margin: 6px 0 0; font-size: 17px; }
+  .role-line .labs { display: block; }
+  .labs-separator { display: none; }
   .profile-links { justify-content: center; gap: 7px 14px; }
   .profile-links a:not(:last-child)::after { display: none; }
   .simple-nav { padding: 8px 14px; }

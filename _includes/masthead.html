@@ -4,7 +4,7 @@
   <img class="avatar" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ profile.name | escape }}" width="136" height="136" fetchpriority="high">
   <div class="profile-details">
     {% if page.home %}<h1 class="profile-name">{{ profile_name }}</h1>{% else %}<p class="profile-name"><a href="{{ '/' | relative_url }}">{{ profile_name }}</a></p>{% endif %}
-    <p class="role-line">{{ profile.label }}<span class="institution">{{ profile.institution }} · <a href="{{ profile.labUrl }}">CATS Lab</a></span></p>
+    <p class="role-line">{{ profile.label }}<span class="institution">{{ profile.institution }}<span class="labs"><span class="labs-separator"> · </span>{% for lab in profile.labs %}{% unless forloop.first %} · {% endunless %}<a href="{{ lab.url }}" title="{{ lab.fullName | escape }}">{{ lab.name }}</a>{% endfor %}</span></span></p>
     <nav class="profile-links" aria-label="Contact and academic profiles">
       <a href="mailto:{{ profile.email }}">Email</a>
       <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>

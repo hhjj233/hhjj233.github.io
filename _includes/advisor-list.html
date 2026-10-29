@@ -1,0 +1,1 @@
+{% for advisor in include.advisors %}{% if forloop.index > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}Prof. <a href="{{ advisor.url | escape }}">{{ advisor.name }}</a>{% endfor %}

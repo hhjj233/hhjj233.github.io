@@ -27,8 +27,18 @@
     ],
     "label": "Ph.D. Candidate in Civil & Environmental Engineering",
     "institution": "University of Wisconsin–Madison",
-    "lab": "Connected & Autonomous Transportation Systems Laboratory (CATS Lab)",
-    "labUrl": "https://catslab.engr.wisc.edu/",
+    "labs": [
+      {
+        "name": "CATS Lab",
+        "fullName": "Connected & Autonomous Transportation Systems Laboratory",
+        "url": "https://catslab.engr.wisc.edu/"
+      },
+      {
+        "name": "TOPS Lab",
+        "fullName": "Traffic Operations and Safety Laboratory",
+        "url": "https://topslab.wisc.edu/"
+      }
+    ],
     "profileUrl": "https://catslab.engr.wisc.edu/staff/liu-jiaxi/",
     "chineseName": "刘家熙",
     "publicationName": "Jiaxi Liu"
@@ -49,7 +59,17 @@
       "studyType": "Ph.D.",
       "status": "In progress",
       "startDate": "",
-      "endDate": ""
+      "endDate": "",
+      "advisors": [
+        {
+          "name": "Bin Ran",
+          "url": "https://topslab.wisc.edu/about/people/bin-ran/"
+        },
+        {
+          "name": "Xiaopeng Li",
+          "url": "https://catslab.engr.wisc.edu/staff/xiaopengli/"
+        }
+      ]
     },
     {
       "institution": "Tsinghua University",
