@@ -4,7 +4,7 @@
     "email": "jliu2487@wisc.edu",
     "phone": null,
     "website": "https://hhjj233.github.io",
-    "summary": "My research focuses on cooperative perception, vehicle-road-cloud integration, language-model-assisted autonomous driving, and safety-critical scenario generation.",
+    "summary": "My current research focuses on calibrated safety testing and vision-language models for autonomous driving, building on earlier work in cooperative perception and vehicle-road-cloud integration.",
     "location": {
       "city": "Madison",
       "region": "Wisconsin",
@@ -49,7 +49,7 @@
       "position": "Research Assistant",
       "startDate": "Fall 2024",
       "endDate": "Present",
-      "summary": "Research on cooperative perception, vehicle-road-cloud integration systems, and LLM-assisted autonomous driving."
+      "summary": "Research on calibrated safety testing, vision-language models for autonomous driving, cooperative perception, and vehicle-road-cloud integration."
     }
   ],
   "education": [
@@ -91,6 +91,26 @@
   "languages": [],
   "interests": [
     {
+      "id": "testing",
+      "label": "Safety testing",
+      "name": "Calibrated safety testing",
+      "description": "Generating corner-case scenarios whose adversity is set as a percentile of the natural risk in the same traffic context.",
+      "examples": [
+        "corner-percentile"
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Language-guided driving",
+      "name": "Language-guided driving",
+      "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control.",
+      "examples": [
+        "sage",
+        "vlm-mpc",
+        "hermes"
+      ]
+    },
+    {
       "id": "cooperation",
       "label": "Cooperative perception",
       "name": "Cooperation under limited communication",
@@ -109,26 +129,6 @@
       "examples": [
         "v2i-workzone",
         "gaia"
-      ]
-    },
-    {
-      "id": "language",
-      "label": "Language-guided driving",
-      "name": "Language-guided driving",
-      "description": "Combining vision-language reasoning with trajectory prediction, planning, and vehicle control.",
-      "examples": [
-        "sage",
-        "vlm-mpc",
-        "hermes"
-      ]
-    },
-    {
-      "id": "testing",
-      "label": "Safety testing",
-      "name": "Calibrated safety testing",
-      "description": "Generating corner-case scenarios whose adversity is set as a percentile of the natural risk in the same traffic context.",
-      "examples": [
-        "corner-percentile"
       ]
     }
   ],

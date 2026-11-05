@@ -1,10 +1,10 @@
 ---
 layout: academic
 permalink: /
-title: "Cooperative perception for safer autonomous driving"
+title: "Calibrated safety testing and vision-language driving"
 home: true
 author_profile: true
-excerpt: "Jiaxi (Jay) Liu, Ph.D. candidate in Civil and Environmental Engineering at UW–Madison. Research on cooperative perception, connected transportation, and AI for autonomous driving."
+excerpt: "Jiaxi (Jay) Liu, Ph.D. candidate in Civil and Environmental Engineering at UW–Madison. Research on calibrated safety testing and vision-language models for autonomous driving, building on work in cooperative perception."
 redirect_from:
   - /about/
   - /about.html
@@ -12,15 +12,18 @@ redirect_from:
 {% assign cv = site.data.cv %}
 <section class="content-section bio-section" id="about" aria-labelledby="about-title">
   <h2 class="sr-only" id="about-title">About</h2>
-  <p class="bio-lead">I study how vehicles and infrastructure can share useful information, understand their surroundings, and support safer driving decisions.</p>
+  <p class="bio-lead">I study how to test automated vehicles at a calibrated level of risk and how to ground vision-language reasoning in geometry and traffic rules.</p>
   {% assign phd = cv.education | where: 'studyType', 'Ph.D.' | first %}
-  <p>I am a Ph.D. candidate in <a href="https://engineering.wisc.edu/departments/civil-environmental-engineering/">Civil and Environmental Engineering</a> at the <a href="https://www.wisc.edu/">University of Wisconsin–Madison</a>, advised by {% include advisor-list.html advisors=phd.advisors %}. I am a member of {% for lab in cv.basics.labs %}{% if forloop.index > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}the <a href="{{ lab.url }}">{{ lab.name }}</a>{% endfor %}. My research focuses on <strong>cooperative perception</strong>, <strong>vehicle-road-cloud systems</strong>, and <strong>AI for autonomous driving</strong>.</p>
+  <p>I am a Ph.D. candidate in <a href="https://engineering.wisc.edu/departments/civil-environmental-engineering/">Civil and Environmental Engineering</a> at the <a href="https://www.wisc.edu/">University of Wisconsin–Madison</a>, advised by {% include advisor-list.html advisors=phd.advisors %}. I am a member of {% for lab in cv.basics.labs %}{% if forloop.index > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}the <a href="{{ lab.url }}">{{ lab.name }}</a>{% endfor %}. My current research focuses on <strong>calibrated safety testing</strong> and <strong>vision-language models for autonomous driving</strong>, building on my earlier work in cooperative perception and vehicle-road-cloud systems.</p>
+  {% assign corner = cv.publications | where: 'id', 'corner-percentile' | first %}
+  {% assign sage = cv.publications | where: 'id', 'sage' | first %}
+  <p>In recent work, <a href="{{ corner.project }}">percentile control</a> sets how extreme a generated highway scenario is, measured against the natural futures of the same traffic context. <a href="{{ sage.project }}">SAGE</a> uses a vision-language model's trajectory to re-rank geometric path candidates through work zones and checks the choice against traffic-control rules.</p>
   <p>Previously, I received my master’s degree in Mechanical Engineering and bachelor’s degree in Vehicle Engineering from Tsinghua University.</p>
 </section>
 
 <section class="content-section" id="research" aria-labelledby="research-title">
   <h2 id="research-title">Research</h2>
-  <p class="section-intro">I am interested in connecting perception with the decisions a vehicle needs to make. My recent work explores four complementary directions:</p>
+  <p class="section-intro">I am interested in connecting perception with the decisions a vehicle needs to make. My current work focuses on the first two directions below; the other two continue my work on cooperative perception and vehicle-infrastructure sensing.</p>
   <div class="research-grid">
     {% for interest in cv.interests %}
     <article class="research-card">

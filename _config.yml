@@ -12,7 +12,7 @@ site_theme               : "default" # the available themes options are "default
 title                    : "Jiaxi (Jay) Liu"
 title_separator          : "-"
 name                     : &name "Jiaxi (Jay) Liu"
-description              : &description "Jiaxi (Jay) Liu — Ph.D. candidate at UW–Madison researching cooperative perception, vehicle-road-cloud systems, and autonomous driving."
+description              : &description "Jiaxi (Jay) Liu — Ph.D. candidate at UW–Madison researching calibrated safety testing and vision-language models for autonomous driving, building on work in cooperative perception."
 url                      : https://hhjj233.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
