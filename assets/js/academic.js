@@ -18,6 +18,19 @@
   updateThemeLabel();
   document.querySelector('[data-print-cv]')?.addEventListener('click', () => window.print());
 
+  // Visitor count from GoatCounter. It stays hidden unless public counts are enabled for the site.
+  const visitCount = document.querySelector('[data-visit-count]');
+  if (visitCount && window.fetch) {
+    fetch(visitCount.dataset.visitCount)
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (!data || !data.count) return;
+        visitCount.querySelector('[data-visit-count-value]').textContent = data.count;
+        visitCount.hidden = false;
+      })
+      .catch(() => { /* Keep the count hidden when it cannot be loaded. */ });
+  }
+
   // Publications: switch between selected and all papers, and filter by research topic.
   const list = document.querySelector('[data-publication-list]');
   if (!list) return;

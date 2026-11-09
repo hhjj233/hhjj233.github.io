@@ -1,2 +1,2 @@
-<p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} · Last updated {{ "now" | date: '%Y-%m-%d' }}</p>
+<p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} · Last updated {{ "now" | date: '%Y-%m-%d' }}{% if site.analytics.goatcounter.code %}<span data-visit-count="https://{{ site.analytics.goatcounter.code }}.goatcounter.com/counter/TOTAL.json" hidden> · <span data-visit-count-value></span> visitors since {{ site.analytics.goatcounter.since }}</span>{% endif %}</p>
 <p>Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a> · <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a></p>

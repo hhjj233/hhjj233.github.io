@@ -158,7 +158,12 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  # GoatCounter (no cookies); dashboard at https://hhjj233.goatcounter.com.
+  # The footer count appears only while "Allow adding visitor counts" is enabled there.
+  goatcounter:
+    code                 : "hhjj233"
+    since                : "November 2026"
   google:
     tracking_id          :
 
